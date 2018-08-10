@@ -1,15 +1,17 @@
-.logo {
-    width: 33px;
-    height: 33px;
+/* .logo {
+    width: 28px;
+    height: 28px;
+    margin: 25px;
 }
 .logo:hover {
     border: 9px #EFEFEF solid;
     border-radius: 50%;
     background: #EFEFEF;
-}
+} */
 header {
     height: 64px;
     display: flex;
     align-items: center;
     border: 1px solid #EFEFEF;
+    color: #8E8E8E;
 }

@@ -1,5 +1,5 @@
 .search {
-    margin: 10px;
+    width: 68%;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -9,7 +9,6 @@
     background-color: #EFEFEF;
 }
 .search-icon {
-    padding: 7px 15px;
+    margin-left: 17px;
     font-size: 21px;
-    color: #8E8E8E;
 }
