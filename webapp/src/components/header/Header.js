@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import './Header.css'
 import Search from './../common/search/Search';
-import HeaderItems from './header-items/HeaderItems';
+import HeaderItems from './header-tabs/HeaderTabs';
+import HeaderMenus from './header-menus/HeaderMenus';
+
 import Logo from './logo/Logo';
 import logoimg from './../../img/logo.png';
 
@@ -21,7 +23,7 @@ class Header extends Component {
                 isShownIcon: false
             },
             {
-                text: "User",
+                text: "Yana",
                 isShownIcon: true
             },
 
@@ -32,6 +34,7 @@ class Header extends Component {
                 <Logo src={logoimg}/>
                 <Search/>
                 <HeaderItems data={headerItemsData}/>
+                <HeaderMenus/>
             </header>
         );
     }

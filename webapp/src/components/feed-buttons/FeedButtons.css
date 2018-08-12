@@ -1,0 +1,10 @@
+.feed-buttons {
+    position: fixed;
+    height: 100px;
+    width: 50px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    right: 25px;
+    bottom: 20px;
+}

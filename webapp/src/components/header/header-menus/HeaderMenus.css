@@ -1,0 +1,12 @@
+.header-menus {
+    display: flex;
+    font-size: 23px;
+}
+.header-menus .header-menu-btn {
+    padding: 12px ;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header-menus .header-menu-btn:hover {
+    background: #EFEFEF;
+}
