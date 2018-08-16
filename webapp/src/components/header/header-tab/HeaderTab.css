@@ -1,9 +1,0 @@
-.header-tab {
-    padding: 8px 15px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-}
-.header-tab:hover {
-    background: #EFEFEF;
-}

@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
 import './HeaderTabs.css';
-import HeaderTab from './../header-tab/HeaderTab';
+// import HeaderTab from './../header-tab/HeaderTab';
+import LinkButton from './../../../common/link-button/LinkButton';
 
 
 
 class HeaderTabs extends Component {
     render() {
         return (
-            <ul className="header-tabs">
+            <div className="header-tabs">
                 {
-                    this.props.data.map(item => <HeaderTab {...item}/>)
+                    this.props.data.map(item => <LinkButton {...item}/>)
                 }
-            </ul>
+            </div>
         );
     }
 }  

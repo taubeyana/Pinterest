@@ -1,0 +1,31 @@
+.menu {
+    position: relative;
+
+}
+.items-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: white;
+    width: 300px;
+    top: 64px;
+    right: 0;
+    font-weight: 700;
+    border: 1px solid #EFEFEF;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px 0px lightgray;
+    /* display: none */
+    
+}
+
+.menu-btn {
+    padding: 12px ;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 23px;
+    
+}
+
+.menu-btn:hover {
+    background: #EFEFEF;
+}

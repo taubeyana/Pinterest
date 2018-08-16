@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 class Search extends Component {
     render() {
         return (
-            <div className="search">
+            <div className="search" >
                 <FontAwesomeIcon className="search-icon" icon="search" />
                 <Input placeholder="Search"/>
             </div>
