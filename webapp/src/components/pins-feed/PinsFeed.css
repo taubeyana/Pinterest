@@ -1,7 +1,6 @@
 .pins-feed {
     position: absolute;
-    top: 64px;
+    top: 85px;
     width: 100%;
     height: 2000px;
-    background-color: lightgray;
 }

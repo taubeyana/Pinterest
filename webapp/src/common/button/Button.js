@@ -9,7 +9,7 @@ class Button extends Component {
             <React.Fragment>
                 { props.img && <ProfilePicture src={props.img} text={props.text}/> }
                 { props.src && <img src={props.src} alt={props.alt} className="btn-img"/> }
-                { props.faIcon && <FontAwesomeIcon className={props.icon + "-faIcon faIcon"} icon={props.faIcon} /> }
+                { props.faIcon && <FontAwesomeIcon className={props.faIcon + "-faIcon faIcon"} icon={props.faIcon} /> }
                 { props.text && <span>{props.text}</span>}
             </React.Fragment>
         );
@@ -18,13 +18,13 @@ class Button extends Component {
     render() {
         // debugger;
 
-        if (this.props.buttonType == 'link') {
+        if (this.props.buttonType === 'link') {
             return (
-                <button type={this.props.type} className={"btn " + this.props.className}>
+                <a href={this.props.href} className={"link-btn " + this.props.className}>
                     {this.renderInnerButton(this.props)}
-                </button> 
+                </a> 
             );
-        } else if (this.props.buttonType == 'button') {
+        } else if (this.props.buttonType === 'button') {
             return (
                 <button type={this.props.type} className={"btn " + this.props.className}>
                     {this.renderInnerButton(this.props)}

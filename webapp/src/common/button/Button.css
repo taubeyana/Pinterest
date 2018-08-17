@@ -1,18 +1,25 @@
-.btn {
-    padding: 10px;
+.btn, .link-btn {
+    padding: 6px;
     display: inline-flex;
     align-items: center;
     cursor: pointer;
 }
-.btn:hover {
+.btn:hover, .link-btn:hover {
     background: #EFEFEF;
 }
 
 .btn-img {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
 }
 .btn span {
     display: inline-block;
     font-size: 16px;
+}
+.btn .faIcon,
+.link-btn .faIcon,
+.btn .btn-img,
+.link-btn .btn-img
+{
+    padding: 5px 10px;
 }

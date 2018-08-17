@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './FloatingMenu.css';
 import Menu from './../../common/menu/Menu'
 class FloatingMenu extends Component {
@@ -13,12 +12,16 @@ class FloatingMenu extends Component {
                     menuItems: [
                         {
                             text: "Upload a Pin",
-                            isShownIcon: true,
-                            faIcon: "plus"
-                    
+                            buttonType: 'button',
+                            faIcon: "plus",
+                            className: 'upload-btn'
+                            
                         },
                         {
-                            text: "Save from web"
+                            text: "Save from web",
+                            buttonType: 'button',
+                            faIcon: "globe",
+                            className: 'save-from-web-btn'
                         }
                     ],
                     menuType: "right"
@@ -28,11 +31,7 @@ class FloatingMenu extends Component {
     }
     render() {
         return (
-                
-                <Menu  data={this.state.menus}/>
-                    
-                
-            
+            <Menu  data={this.state.menus}/>
         );
     }
 }

@@ -15,29 +15,29 @@ class Header extends Component {
             tabsData: [
                 {
                     text: "Home",
-                    isShownIcon: false,
                     className: "header-tab",
-                    buttonType: 'link'
+                    buttonType: 'link',
+                    href: "#"
                     
                 },
                 {
                     text: "Following",
-                    isShownIcon: false,
                     className: "header-tab",
-                    buttonType: 'link'
+                    buttonType: 'link',
+                    href: "#"
                 },
                 {
                     text: "Explore",
-                    isShownIcon: false,
                     className: "header-tab",
-                    buttonType: 'link'
+                    buttonType: 'link',
+                    href: "#"
                 },
                 {
                     text: this.currentUser.name,
-                    isShownIcon: true,
                     img: this.currentUser.img,
                     className: "header-tab",
-                    buttonType: 'link'
+                    buttonType: 'link',
+                    href: "#"
                 },
             ]
         }

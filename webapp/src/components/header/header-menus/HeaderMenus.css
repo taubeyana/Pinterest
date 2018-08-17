@@ -2,16 +2,12 @@
     display: flex;
     
 }
-.header-menus .header-menu-btn {
-    padding: 12px ;
-    border-radius: 50%;
-    cursor: pointer;
+.header-menus .btn, .header-menu .link-btn {
+    padding: 8px 15px;
     font-size: 23px;
-    /* color: #333333; */
-}
-.header-menus .link-btn {
     color: #333333;
 }
-.header-menus .header-menu-btn:hover {
-    background: #EFEFEF;
+
+.settings-btn {
+    border-bottom: 1px solid #EFEFEF;
 }

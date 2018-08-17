@@ -28,3 +28,15 @@ ul {
   position: relative;
   color: #333333;
 }
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}

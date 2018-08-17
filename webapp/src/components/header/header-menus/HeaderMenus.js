@@ -8,7 +8,7 @@ class HeaderMenus extends Component {
         this.state = {
             menus: [
                 {
-                    text: "messages",
+                    name: "messages",
                     menuIcon: "comment",
                     menuItems: null,
                     menuType: null
@@ -26,11 +26,14 @@ class HeaderMenus extends Component {
                         {
                             text: 'Settings',
                             buttonType: 'button',
-                            faIcon: "bell"
+                            faIcon: null,
+                            className: 'settings-btn'
                         },
                         {
                             text: 'Logout',
-                            buttonType: 'button'
+                            buttonType: 'button',
+                            faIcon: null,
+                            className: 'logout-btn'
                         }
                     ],
                     menuType: "up"
@@ -39,9 +42,6 @@ class HeaderMenus extends Component {
         }
     }
     render() {
-        // <MessagesMenu/>
-        //         <NotificationsMenu/>
-        
         return (
             <div className="header-menus">
                 <Menu data={this.state.menus}/>

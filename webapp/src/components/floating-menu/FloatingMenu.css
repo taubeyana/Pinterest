@@ -1,14 +1,17 @@
 .add-menu {
     position: fixed;
-    background-color: white;
     right: 25px;
     bottom: 50px;
     border-radius: 50%
 }
-.add-menu .items-wrapper {
+.add-menu .items-outer-wrapper {
     top: -13px;
     right: 54px;
 }
-.add-menu .add-button {
+.add-menu {
     box-shadow: 0px 2px 2px 0px lightgrey;
+}
+
+.upload-btn {
+    border-bottom: 1px solid #EFEFEF;
 }

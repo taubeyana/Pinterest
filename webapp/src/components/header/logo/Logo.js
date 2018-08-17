@@ -5,10 +5,9 @@ import './Logo.css';
 class Logo extends Component {
     render() {
         return (
-            <div className="logo-wrapper">
-                <img className="logo" src={this.props.src} alt={this.props.alt}/>
-            </div>
+            <img className="logo" src={this.props.src} alt={this.props.alt}/>
         );
     }
 }
 export default Logo;
+
