@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './HeaderTabs.css';
 // import HeaderTab from './../header-tab/HeaderTab';
-import LinkButton from './../../../common/link-button/LinkButton';
+import Button from './../../../common/button/Button';
 
 
 
@@ -10,7 +10,7 @@ class HeaderTabs extends Component {
         return (
             <div className="header-tabs">
                 {
-                    this.props.data.map(item => <LinkButton {...item}/>)
+                    this.props.data.map(item => <Button {...item}/>)
                 }
             </div>
         );

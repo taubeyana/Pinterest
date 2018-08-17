@@ -14,7 +14,7 @@ class FloatingMenu extends Component {
                         {
                             text: "Upload a Pin",
                             isShownIcon: true,
-                            icon: "plus"
+                            faIcon: "plus"
                     
                         },
                         {

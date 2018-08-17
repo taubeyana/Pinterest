@@ -3,10 +3,10 @@ import Header from './components/header/Header';
 import PinsFeed from './components/pins-feed/PinsFeed';
 import FloatingMenu from './components/floating-menu/FloatingMenu';
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faSearch,  faComment, faBell, faEllipsisH ,faPlus } from '@fortawesome/free-solid-svg-icons'
+import { faSearch,  faComment, faBell, faEllipsisH ,faPlus, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
 
-library.add(faSearch, faComment, faBell, faEllipsisH, faPlus);
+library.add(faSearch, faComment, faBell, faEllipsisH, faPlus, faExternalLinkAlt);
 
 
 class App extends Component {

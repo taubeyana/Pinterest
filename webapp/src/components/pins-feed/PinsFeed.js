@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './PinsFeed.css';
+import Pin from './pin/Pin'
 
 class PinsFeed extends Component {
     constructor(props) {
@@ -19,6 +20,7 @@ class PinsFeed extends Component {
         return (
             <div className="pins-feed">
                 {this.state.posts}
+                <Pin/>
             </div>
         );
     }

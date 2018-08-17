@@ -8,7 +8,7 @@ class HeaderMenus extends Component {
         this.state = {
             menus: [
                 {
-                    name: "messages",
+                    text: "messages",
                     menuIcon: "comment",
                     menuItems: null,
                     menuType: null
@@ -25,9 +25,12 @@ class HeaderMenus extends Component {
                     menuItems: [
                         {
                             text: 'Settings',
+                            buttonType: 'button',
+                            faIcon: "bell"
                         },
                         {
-                            text: 'Logout'
+                            text: 'Logout',
+                            buttonType: 'button'
                         }
                     ],
                     menuType: "up"

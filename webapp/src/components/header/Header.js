@@ -10,29 +10,34 @@ import logoimg from './../../img/logo.png';
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.currentUser = {name: 'Yana', img: 'https://goo.gl/BPwvBt'}
+        this.currentUser = {name: 'Yana', img: 'https://goo.gl/ryHGRR'}
         this.state = {
             tabsData: [
                 {
                     text: "Home",
                     isShownIcon: false,
-                    className: "header-tab"
+                    className: "header-tab",
+                    buttonType: 'link'
+                    
                 },
                 {
                     text: "Following",
                     isShownIcon: false,
-                    className: "header-tab"
+                    className: "header-tab",
+                    buttonType: 'link'
                 },
                 {
                     text: "Explore",
                     isShownIcon: false,
-                    className: "header-tab"
+                    className: "header-tab",
+                    buttonType: 'link'
                 },
                 {
                     text: this.currentUser.name,
                     isShownIcon: true,
                     img: this.currentUser.img,
-                    className: "header-tab"
+                    className: "header-tab",
+                    buttonType: 'link'
                 },
             ]
         }

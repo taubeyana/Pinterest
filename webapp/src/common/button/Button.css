@@ -1,0 +1,18 @@
+.btn {
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+.btn:hover {
+    background: #EFEFEF;
+}
+
+.btn-img {
+    width: 20px;
+    height: 20px;
+}
+.btn span {
+    display: inline-block;
+    font-size: 16px;
+}
