@@ -17,6 +17,7 @@ class Menu extends Component {
                             <div className="items-inner-wrapper">
                                 {item.menuType ? <Triangle direction={item.menuType || "up"}></Triangle> : null}
                                 {item.menuItems.map(btn => <Button text={btn.text} faIcon={btn.faIcon} buttonType={btn.buttonType} className={btn.className} />  )}
+                                {this.props.children}
                             </div>
                         </div> 
                         : null

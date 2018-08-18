@@ -16,8 +16,6 @@ class Button extends Component {
 
     }
     render() {
-        // debugger;
-
         if (this.props.buttonType === 'link') {
             return (
                 <a href={this.props.href} className={"link-btn " + this.props.className}>
