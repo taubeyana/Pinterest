@@ -9,20 +9,16 @@ import Button from '../../../common/button/Button';
 
 class Pin extends Component {
     render() {
-        const pins= this.props.data;
         return (
-            pins.map(pin => {
-                return (<div className='pin grid-item'>
-                <img src={pin.img} alt={pin.alt} />
+            <div className='pin grid-item'>
+                <img src={this.props.img} alt={this.props.alt} />
                 <SelectMenu/>
                 <div className="options-wrapper">
-                    <span>{pin.title}</span>
+                    <span>{this.props.title}</span>
                     <OptionsMenu/>
-                    <Button text={pin.link.slice(7)} href={pin.link} buttonType="link" faIcon="external-link-alt" className="pin-link"/>
+                    <Button text={this.props.link.slice(7)} href={this.props.link} buttonType="link" faIcon="external-link-alt"/>
                 </div>
-            </div>)
-            })
-           
+            </div>
         );
     }
 
