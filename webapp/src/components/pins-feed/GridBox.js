@@ -1,24 +1,19 @@
 import React, {Component} from 'react';
 import Masonry from 'react-masonry-component';
 import './GridBox.css'
-import Button from './../../common/button/Button';
 import Pin from './pin/Pin';
 
 const masonryOptions = {
     transitionDuration: 0,
-    fitWidth: true
+    fitWidth: true,
 };
-
-
-
 class GridBox extends Component {
     render() {
+        
         const pins = [...this.props.data];
         const childElements = pins.map(pin => {
             return (
-                
-                    <Pin data={pins}/>
-                
+                <Pin data={pins}/>
             )
         });
         return (

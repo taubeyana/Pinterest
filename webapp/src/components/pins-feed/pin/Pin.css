@@ -8,7 +8,10 @@
 }
 .pin img {
     width: 100%;
+    object-fit: cover;
+    object-position: 0 0;
     border-radius: inherit;
+    max-height: 500px;
 
 }
 

@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import './Pin.css';
-import SaveButton from './../../../common/save-button/SaveButton';
-import ReportButton from './../../../common/report-button/ReportButton';
 import OptionsMenu from './options-menu/OptionsMenu';
 import SelectMenu from './../../../common/select-menu/SelectMenu';
 import Button from '../../../common/button/Button';
@@ -28,4 +26,3 @@ class Pin extends Component {
 
 }
 export default Pin;
-// <Button text="" buttonType="link" faIcon="external-link-alt"/>
