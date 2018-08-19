@@ -24,4 +24,3 @@ class Pin extends Component {
 
 }
 export default Pin;
-// <Button text="" buttonType="link" faIcon="external-link-alt"/>
