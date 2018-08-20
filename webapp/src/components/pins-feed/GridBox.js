@@ -5,15 +5,14 @@ import Pin from './pin/Pin';
 
 const masonryOptions = {
     transitionDuration: 0,
-    fitWidth: true,
+    fitWidth: true
 };
+
 class GridBox extends Component {
     render() {
-        
-        const pins = [...this.props.data];
-        const childElements = pins.map(pin => {
+        const childElements =this.props.data.map(pin => {
             return (
-                <Pin data={pins}/>
+                <Pin data={pin}/>
             )
         });
         return (

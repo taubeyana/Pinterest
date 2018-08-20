@@ -7,19 +7,19 @@ import Button from '../../../common/button/Button';
 
 class Pin extends Component {
     render() {
-        const pins= this.props.data;
+        console.log(this.props.data)
         return (
-            pins.map(pin => {
-                return (<div className='pin grid-item'>
-                <img src={pin.img} alt={pin.alt} />
+            
+            <div className='pin grid-item' key={this.props.data.key}>
+                <img src={this.props.data.img} alt={this.props.data.alt} />
                 <SelectMenu/>
                 <div className="options-wrapper">
-                    <span>{pin.title}</span>
+                    <span>{this.props.data.title}</span>
                     <OptionsMenu/>
-                    <Button text={pin.link.slice(7)} href={pin.link} buttonType="link" faIcon="external-link-alt" className="pin-link"/>
+                    <Button text={this.props.data.link.slice(7)} href={this.props.data.link} buttonType="link" faIcon="external-link-alt" className="pin-link"/>
                 </div>
-            </div>)
-            })
+            </div>
+           
            
         );
     }

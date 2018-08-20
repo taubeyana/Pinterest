@@ -13,14 +13,12 @@ class OptionsMenu extends Component {
                     name: "options",
                     menuIcon: "ellipsis-h",
                     menuItems: [
-
                         {
                             text: 'Hide',
                             buttonType: 'button',
                             faIcon: "times",
                             className: 'hide-btn'
                         },
-
                     ],
                     menuType: "up",
                     common: [{
