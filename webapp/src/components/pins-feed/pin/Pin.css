@@ -1,39 +1,33 @@
 .pin {
-    width: 240px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 10px;
-    cursor: zoom-in;
+  width: 240px;
+  display: inline-block;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: zoom-in; }
 
-}
 .pin img {
-    width: 100%;
-    object-fit: cover;
-    object-position: 0 0;
-    border-radius: inherit;
-    max-height: 500px;
-
-}
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  border-radius: inherit;
+  max-height: 500px; }
 
 .pin .options-wrapper {
-    display: flex;
-    position: relative;
-    font-size: 14px;
-    font-weight: 700;
-}
+  display: flex;
+  position: relative;
+  font-size: 14px;
+  font-weight: 700; }
+
 .pin:hover {
-    background-color: #F2F2F2;
-}
+  background-color: #F2F2F2; }
 
 .pin .link-btn {
-    position: absolute;
-    bottom: 49px;
-    left: 8px;
-    background: #EFEFEF;
-    border-radius: 5px;
-    display: none;
+  position: absolute;
+  bottom: 49px;
+  left: 8px;
+  background: #EFEFEF;
+  border-radius: 5px;
+  display: none; }
 
-}
 .pin .link-btn span {
-    font-size: 13px;
-}
+  font-size: 13px; }

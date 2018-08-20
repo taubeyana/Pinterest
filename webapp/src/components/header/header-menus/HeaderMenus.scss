@@ -1,0 +1,17 @@
+.header-menus {
+    display: flex;
+    
+}
+.header-menus .btn, .header-menu .link-btn {
+    padding: 8px 15px;
+    font-size: 23px;
+    color: #333333;
+}
+
+.settings-btn {
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.header-menus .items-outer-wrapper {
+    display: block;
+}

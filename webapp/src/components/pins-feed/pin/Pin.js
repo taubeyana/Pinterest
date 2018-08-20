@@ -9,7 +9,6 @@ class Pin extends Component {
     render() {
         console.log(this.props.data)
         return (
-            
             <div className='pin grid-item' key={this.props.data.key}>
                 <img src={this.props.data.img} alt={this.props.data.alt} />
                 <SelectMenu/>

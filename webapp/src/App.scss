@@ -1,6 +1,7 @@
 input {
   border: none;
-  outline: none; }
+  outline: none;
+}
 
 button {
   border: none;
@@ -15,23 +16,27 @@ button {
   line-height: normal;
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+}
 
 ul {
   list-style: none;
   padding: 0;
-  margin: 0; }
-
+  margin: 0;
+}
 .App {
   position: relative;
-  color: #333333; }
+  color: #333333;
+}
 
 a {
-  text-decoration: inherit;
-  color: inherit;
-  cursor: auto; }
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
 
 a:visited {
-  text-decoration: inherit;
-  color: inherit;
-  cursor: auto; }
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
