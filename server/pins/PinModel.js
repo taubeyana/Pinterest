@@ -1,0 +1,19 @@
+const db = require('./../db');
+// const pins = require('./../../webapp/src/temp');
+
+const PinSchema = db.Schema({
+    title: String,
+    body:String,
+    img: String,
+    link: String,
+    category: String
+})
+
+const Pin = db.model('Pin', PinSchema);
+
+// const many=pins.map(pin => {
+//     return new Pin(pin)
+// });
+// Pin.insertMany(many)
+
+module.exports = Pin;

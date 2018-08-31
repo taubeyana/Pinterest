@@ -1,10 +1,10 @@
 const express = require('express');
 const app = express();
-const db = require('./db');
 const users = require('./users/index');
 const pins = require('./pins/index');
+const bodyParser = require('body-parser');
 
-
+app.use(bodyParser.json());
 app.use('/api/users/', users);
 app.use('/api/pins/', pins);
 
