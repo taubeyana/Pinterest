@@ -9,6 +9,7 @@ class FloatingMenu extends Component {
                 {
                     name: "add",
                     menuIcon: "plus",
+                    buttonType: 'button',
                     menuItems: [
                         {
                             text: "Upload a Pin",
@@ -24,16 +25,19 @@ class FloatingMenu extends Component {
                             className: 'save-from-web-btn'
                         }
                     ],
-                    menuType: "right"
+                    menuType: "right",
+                    isVisible: false
                 },
             ]
         }
     }
     render() {
         return (
-            <Menu  data={this.state.menus}/>
+            this.state.menus.map(item => <Menu item={item}/>)
         );
     }
 }
 
 export default FloatingMenu;
+
+// <Menu  data={this.state.menus}/>

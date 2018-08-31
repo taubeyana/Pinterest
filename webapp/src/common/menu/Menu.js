@@ -5,25 +5,39 @@ import Triangle from './../triangle/Triangle';
 import './Menu.css';
 
 class Menu extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {isDisplayed: true}
+        this.menuStyle = {display: "none"}
+
+    }
+    toggle() {
+        this.setState({isDisplayed: !this.state.isDisplayed})
+        if  (this.state.isDisplayed === true) {
+            this.menuStyle = {display: "block"}
+        }
+        else {
+            this.menuStyle = {display: "none"}
+        }
+    }
     render() {
         return (
-            this.props.data.map(item => {
-                return (
-                    <div className={item.name + "-menu menu"}>
-                    {item.menuIcon ? <FontAwesomeIcon className={item.name + "-menu-btn menu-btn"} icon={item.menuIcon} /> : null}
-                    {
-                        item.menuItems?
-                        <div className="items-outer-wrapper">
-                            <div className="items-inner-wrapper">
-                                {item.menuType ? <Triangle direction={item.menuType || "up"}></Triangle> : null}
-                                {item.menuItems.map(btn => <Button text={btn.text} faIcon={btn.faIcon} buttonType={btn.buttonType} className={btn.className} />  )}
-                                {this.props.children}
-                            </div>
-                        </div> 
-                        : null
-                    }
-                    </div>)
-                })
+            
+                <div className={this.props.item.name + "-menu menu"}>
+                {  this.props.item.menuIcon ? <Button faIcon={this.props.item.menuIcon} className={this.props.item.name + "-menu-btn menu-btn"} buttonType = {this.props.item.buttonType} handleClick={() => this.toggle.bind(this)()}/> : null}
+                {
+                    this.props.item.menuItems?
+                    <div className="items-outer-wrapper" style={this.menuStyle}>
+                        <div className="items-inner-wrapper">
+                            {this.props.item.menuType ? <Triangle direction={this.props.item.menuType || "up"}></Triangle> : null}
+                            {this.props.item.menuItems.map(btn => <Button text={btn.text} faIcon={btn.faIcon} buttonType={btn.buttonType} className={btn.className} />)}
+                            {this.props.children}
+                        </div>
+                    </div> 
+                    : null
+                }
+                </div>
+                
             );
         }
     }

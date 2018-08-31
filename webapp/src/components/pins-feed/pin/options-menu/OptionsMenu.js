@@ -12,6 +12,7 @@ class OptionsMenu extends Component {
                 {
                     name: "options",
                     menuIcon: "ellipsis-h",
+                    buttonType: 'button',
                     menuItems: [
                         {
                             text: 'Hide',
@@ -30,12 +31,20 @@ class OptionsMenu extends Component {
     }
     render() {
         return (
-            <Menu data={this.state.menus}>
-                <SendButton/>
-                <ReportButton/>
-            </Menu>
+            this.state.menus.map(item => {
+              return  <Menu item={item}>
+                    <SendButton/>
+                    <ReportButton/>
+                </Menu>
+            })
         )
     }
 }
 
 export default OptionsMenu;
+
+
+// <Menu data={this.state.menus}>
+//                 <SendButton/>
+//                 <ReportButton/>
+//             </Menu>

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Masonry from 'react-masonry-component';
 import './GridBox.css'
 import Pin from './pin/Pin';
+import LoadingImage from './../../common/loading-gif/LoadingGif';
 
 const masonryOptions = {
     transitionDuration: 0,
@@ -9,12 +10,29 @@ const masonryOptions = {
 };
 
 class GridBox extends Component {
+    componentWillUpdate(nextProps, nextState) {
+        console.log(nextProps, nextState)
+    }
     render() {
-        const childElements =this.props.data.map(pin => {
-            return (
-                <Pin data={pin}/>
-            )
-        });
+        let childElements = [];
+        // if (this.props.data.length > 0) {
+        //     childElements = this.props.data.map(pin => {
+        //         return (
+        //             <Pin data={pin}/>
+        //         )
+        //     });
+        // }
+        // else {
+
+        //     childElements = <LoadingImage/>
+        // }
+        childElements = this.props.data.map(pin => {
+                    return (
+                        <Pin data={pin}/>
+                    )
+                });
+
+
         return (
             <Masonry
                 className={'my-gallery-class'} // default ''
@@ -23,6 +41,7 @@ class GridBox extends Component {
                 updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
                 options={masonryOptions}
             >
+                {this.props.state && <LoadingImage/>}
                 {childElements}
             </Masonry>
         );

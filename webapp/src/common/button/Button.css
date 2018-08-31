@@ -14,10 +14,9 @@
 .btn span, .link-btn span {
   display: inline-block;
   font-size: 16px;
-  font-weight: 700; }
+  font-weight: 700;
+  margin-left: 5px; }
 
-.btn .faIcon,
-.link-btn .faIcon,
 .btn .btn-img,
 .link-btn .btn-img {
   margin-right: 5px; }

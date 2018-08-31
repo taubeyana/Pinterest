@@ -9,7 +9,7 @@
   cursor: pointer;
   border-radius: 5px;
   overflow: hidden;
-  /* display: none; */ }
+  display: none; }
 
 .select-menu-header .save-btn {
   padding: 10px; }

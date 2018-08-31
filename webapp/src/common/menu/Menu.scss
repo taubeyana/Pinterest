@@ -13,11 +13,12 @@
     border-radius: 10px;
     box-shadow: 0px 4px 15px 0px lightgray;
     background: white;
-    display: none;
+    z-index: 1;
+    // display: none;
     
 }
 .items-outer-wrapper .btn {
-    padding: 8px 15px;
+    // padding: 8px 15px;
     background: white;
     
 }

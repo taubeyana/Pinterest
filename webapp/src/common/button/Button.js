@@ -24,7 +24,7 @@ class Button extends Component {
             );
         } else if (this.props.buttonType === 'button') {
             return (
-                <button type={this.props.type} className={"btn " + this.props.className}>
+                <button type={this.props.type} className={"btn " + this.props.className} onClick={this.props.handleClick}>
                     {this.renderInnerButton(this.props)}
                 </button>
             );
