@@ -18,16 +18,16 @@
     right: 12px;
     top: -11px;
 }
-.triangle-right {
-    border: 10px solid transparent;
-    border-right: none;
-    border-left: 10px solid #fff;
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 2px;
-    top: -10px;
-}
+// .triangle-right {
+//     border: 10px solid transparent;
+//     border-right: none;
+//     border-left: 10px solid #fff;
+//     width: 0;
+//     height: 0;
+//     position: absolute;
+//     right: 2px;
+//     top: -10px;
+// }
 .triangle-border-right {
     border: 11px solid transparent;
     border-right: none;
@@ -38,3 +38,28 @@
     right: -12px;
     top: 25px;
 }
+
+@mixin triangle($direction, $color, $big, $small) {
+    border: $small solid transparent;
+    border-#{$direction}: none;
+    width: 0;
+    height: 0;
+    
+    @if ($direction == top) {
+        border-bottom: $big solid $color;
+    }@else if ($direction == left) {
+        border-right: $big solid $color;
+    }@else if ($direction == bottom) {
+        border-top: $big solid $color;
+    }@else if ($direction == right) {
+        border-left: $big solid $color;
+    }
+  }
+  
+  .triangle-right {
+      @include triangle(right,white ,12px ,10px );
+        position: absolute;
+        right: 2px;
+        top: -10px;
+
+  }

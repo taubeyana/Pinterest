@@ -226,4 +226,4 @@ const pins = [
 
 ]
 
-export default pins;
+module.exports = pins

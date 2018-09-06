@@ -22,7 +22,6 @@ class Menu extends Component {
     }
     render() {
         return (
-            
                 <div className={this.props.item.name + "-menu menu"}>
                 {  this.props.item.menuIcon ? <Button faIcon={this.props.item.menuIcon} className={this.props.item.name + "-menu-btn menu-btn"} buttonType = {this.props.item.buttonType} handleClick={() => this.toggle.bind(this)()}/> : null}
                 {
