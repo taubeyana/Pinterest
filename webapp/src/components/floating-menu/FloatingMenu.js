@@ -1,6 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './FloatingMenu.css';
-import Menu from './../../common/menu/Menu'
+import Menu from './../../common/menu/Menu';
+import uniqid from 'uniqid';
+
 class FloatingMenu extends Component {
     constructor(props) {
         super(props);
@@ -33,11 +35,9 @@ class FloatingMenu extends Component {
     }
     render() {
         return (
-            this.state.menus.map(item => <Menu item={item}/>)
+            this.state.menus.map(item => <Menu item={ item } key={ uniqid() }/>)
         );
     }
 }
 
 export default FloatingMenu;
-
-// <Menu  data={this.state.menus}/>

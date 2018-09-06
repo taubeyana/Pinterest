@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './HeaderMenus.css'
 import Menu from './../../../common/menu/Menu';
-import Button from './../../../common/button/Button';
+import uniqid from 'uniqid';
 
 class HeaderMenus extends Component {
     constructor(props) {
@@ -52,14 +52,14 @@ class HeaderMenus extends Component {
         }
     }
     toggleMenu(index)  {
-        let currentState = {...this.state}
+        let currentState = { ...this.state }
         let updatedState = currentState.menus[index].isDisplayed = !currentState.menus[index].isDisplayed;
-        this.setState({updatedState})
+        this.setState({ updatedState })
     }
     render() {
         return (
-            <div className="header-menus">
-                {this.state.menus.map((item) => <Menu item={item}/>)}
+            <div className = "header-menus">
+                { this.state.menus.map((item) => <Menu item={item} key={ uniqid() }/>) }
             </div>
         )
     }

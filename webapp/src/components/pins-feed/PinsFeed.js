@@ -1,8 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './PinsFeed.css';
-import GridBox from './GridBox';
-import pins from './../../temp';
-
+import GridBox from './components/grid-box/GridBox';
 import GetPinsService from './../../services/GetPinsService';
 
 class PinsFeed extends Component {
@@ -17,17 +15,19 @@ class PinsFeed extends Component {
     componentDidMount() {
         GetPinsService.getRelevantPins()
         .then(pins => {
-            this.setState({pins: [...pins]})
-            this.setState({loading: false})
+            this.setState({ pins: [...pins] })
+            this.setState({ loading: false })
         })
         .catch(e => console.log(e))
     }
 
     render() {
         return (
-            <div className="pins-feed">
-                <div className="grid-box-wrapper">
-                    <GridBox state={this.state.loading} data={this.state.pins}/>
+            <div className = "pins-feed">
+                <div className = "grid-box-wrapper">
+                    <GridBox 
+                        state = { this.state.loading } 
+                        data = { this.state.pins }/>
                 </div>
             </div>
         );

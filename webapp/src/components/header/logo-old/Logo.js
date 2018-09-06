@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Logo.css';
 
 
 class Logo extends Component {
     render() {
         return (
-            <img className="logo" src={this.props.src} alt={this.props.alt}/>
+            <img className = "logo" src = {this.props.src} alt={this.props.alt}/>
         );
     }
 }

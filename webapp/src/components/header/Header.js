@@ -1,16 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './Header.css'
 import Search from './../../common/search/Search';
 import HeaderTabs from './header-tabs/HeaderTabs';
 import HeaderMenus from './header-menus/HeaderMenus';
-
-import Logo from './logo/Logo';
+import Button from './../../common/button/Button';
 import logoimg from './../../img/logo.png';
 
 class Header extends Component {
     constructor(props) {
         super(props);
-        this.currentUser = {name: 'Yana', img: 'https://goo.gl/ryHGRR'}
+
+        this.currentUser = {
+            name: 'Yana',
+            img: 'https://goo.gl/ryHGRR'
+        }
         this.state = {
             tabsData: [
                 {
@@ -18,7 +21,6 @@ class Header extends Component {
                     className: "header-tab",
                     buttonType: 'link',
                     href: "#"
-                    
                 },
                 {
                     text: "Following",
@@ -46,9 +48,13 @@ class Header extends Component {
     render() {
         return (
             <header>
-                <Logo src={logoimg}/>
+                <Button 
+                    buttonType = "link" 
+                    className = "logo" 
+                    img = { logoimg } 
+                    alt = "logoimg"/>
                 <Search/>
-                <HeaderTabs data={this.state.tabsData}/>
+                <HeaderTabs data = { this.state.tabsData }/>
                 <HeaderMenus/>
             </header>
         );

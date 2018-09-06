@@ -501,7 +501,7 @@ import './Button.css'; // Tell Webpack that Button.js uses these styles
 class Button extends Component {
   render() {
     // You can use them as regular CSS styles
-    return <div className="Button" />;
+    return <div className = "Button" />;
   }
 }
 ```
@@ -657,7 +657,7 @@ console.log(logo); // /logo.84287d09.png
 
 function Header() {
   // Import result is the URL of your image
-  return <img src={logo} alt="Logo" />;
+  return <img src = {logo} alt="Logo" />;
 }
 
 export default Header;
@@ -708,7 +708,7 @@ If you put a file into the `public` folder, it will **not** be processed by Webp
 Inside `index.html`, you can use it like this:
 
 ```html
-<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+<link rel="shortcut icon" href = "%PUBLIC_URL%/favicon.ico">
 ```
 
 Only files inside the `public` folder will be accessible by `%PUBLIC_URL%` prefix. If you need to use a file from `src` or `node_modules`, you’ll have to copy it there to explicitly specify your intention to make this file a part of the build.
@@ -722,7 +722,7 @@ render() {
   // Note: this is an escape hatch and should be used sparingly!
   // Normally we recommend using `import` for getting asset URLs
   // as described in “Adding Images and Fonts” above this section.
-  return <img src={process.env.PUBLIC_URL + '/img/logo.png'} />;
+  return <img src = {process.env.PUBLIC_URL + '/img/logo.png'} />;
 }
 ```
 
@@ -2027,7 +2027,7 @@ More information [here](https://reacttraining.com/react-router/web/api/BrowserRo
 For example:
 ```js
 <BrowserRouter basename="/calendar"/>
-<Link to="/today"/> // renders <a href="/calendar/today">
+<Link to="/today"/> // renders <a href = "/calendar/today">
 ```
 
 #### Serving the Same Build from Different Paths
@@ -2196,7 +2196,7 @@ npm run deploy
 
 Finally, make sure **GitHub Pages** option in your GitHub project settings is set to use the `gh-pages` branch:
 
-<img src="http://i.imgur.com/HUjEr9l.png" width="500" alt="gh-pages branch setting">
+<img src = "http://i.imgur.com/HUjEr9l.png" width="500" alt="gh-pages branch setting">
 
 #### Step 5: Optionally, configure the domain
 

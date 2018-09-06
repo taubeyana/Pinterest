@@ -9,3 +9,17 @@ header {
     background-color: white;
     z-index: 1;
 }
+.logo {
+    margin: 25px;
+    border-radius: 50%;
+    padding: 0;
+}
+.logo img {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    margin: 0;
+}
+.logo:hover {
+    background: #EFEFEF;
+}

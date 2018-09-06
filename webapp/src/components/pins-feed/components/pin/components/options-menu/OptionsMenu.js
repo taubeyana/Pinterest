@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './OptionsMenu.css';
-import Menu from './../../../../common/menu/Menu';
-import SendButton from './../../../../common/send-button/SendButton';
-import ReportButton from './../../../../common/report-button/ReportButton';
+import Menu from './../../../../../../common/menu/Menu';
+import SendButton from './../../../../../../common/send-button/SendButton';
+import ReportButton from './../../../../../../common/report-button/ReportButton';
+import uniqid from 'uniqid';
 
 class OptionsMenu extends Component {
     constructor(props) {
@@ -32,7 +33,7 @@ class OptionsMenu extends Component {
     render() {
         return (
             this.state.menus.map(item => {
-              return  <Menu item={item}>
+              return  <Menu item={item} key={uniqid()}>
                     <SendButton/>
                     <ReportButton/>
                 </Menu>
