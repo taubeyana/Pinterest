@@ -11,7 +11,9 @@ import {
     faShareSquare, 
     faBan, 
     faTimes, 
-    faAngleDown 
+    faAngleDown, 
+    faUserFriends,
+    faCompass
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -25,5 +27,7 @@ library.add(
     faShareSquare, 
     faBan, 
     faTimes, 
-    faAngleDown
+    faAngleDown,
+    faUserFriends,
+    faCompass
 );

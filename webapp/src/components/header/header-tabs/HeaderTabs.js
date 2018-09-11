@@ -16,6 +16,7 @@ class HeaderTabs extends Component {
                 },
                 {
                     text: "Following",
+                    faIcon: "user-friends",
                     className: "header-tab",
                     buttonType: 'link',
                     href: "#"
@@ -23,6 +24,7 @@ class HeaderTabs extends Component {
                 {
                     text: "Explore",
                     className: "header-tab",
+                    faIcon: "compass",
                     buttonType: 'link',
                     href: "#"
                 },
