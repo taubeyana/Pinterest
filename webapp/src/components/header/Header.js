@@ -14,37 +14,7 @@ class Header extends Component {
             name: 'Yana',
             img: 'https://goo.gl/ryHGRR'
         }
-        this.state = {
-            tabsData: [
-                {
-                    text: "Home",
-                    className: "header-tab",
-                    buttonType: 'link',
-                    href: "#"
-                },
-                {
-                    text: "Following",
-                    className: "header-tab",
-                    buttonType: 'link',
-                    href: "#"
-                },
-                {
-                    text: "Explore",
-                    className: "header-tab",
-                    buttonType: 'link',
-                    href: "#"
-                },
-                {
-                    text: this.currentUser.name,
-                    img: this.currentUser.img,
-                    className: "header-tab",
-                    buttonType: 'link',
-                    href: "#"
-                },
-            ]
-        }
     }
-
     render() {
         return (
             <header>
@@ -54,10 +24,12 @@ class Header extends Component {
                     img = { logoimg } 
                     alt = "logoimg"/>
                 <Search/>
-                <HeaderTabs data = { this.state.tabsData }/>
+                <HeaderTabs user = {  this.currentUser }/>
                 <HeaderMenus/>
             </header>
         );
     }
 }
+
+
 export default Header;

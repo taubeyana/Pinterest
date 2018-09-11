@@ -1,12 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './input.css';
 
-class Input extends Component {
-    render() {
+const Input = props => {
         return (
-            <input placeholder = { this.props.placeholder }/>
+            <input placeholder = { props.placeholder }/>
         );
-    }
 }
 
 export default Input;
+
+// import React, { Component } from 'react';
+// class Input extends Component {
+//     render() {
+//         return (
+//             <input placeholder = { this.props.placeholder }/>
+//         );
+//     }
+// }
+
+// export default Input;

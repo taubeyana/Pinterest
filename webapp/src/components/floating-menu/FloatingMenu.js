@@ -35,7 +35,8 @@ class FloatingMenu extends Component {
     }
     render() {
         return (
-            this.state.menus.map(item => <Menu item={ item } key={ uniqid() }/>)
+            this.state.menus
+            .map(item => <Menu item={ item } key={ uniqid() }/>)
         );
     }
 }

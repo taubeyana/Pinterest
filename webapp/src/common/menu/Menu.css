@@ -15,7 +15,8 @@
   z-index: 1; }
 
 .items-outer-wrapper .btn {
-  background: white; }
+  background: white;
+  padding: 10px 15px; }
 
 .items-outer-wrapper .btn:hover {
   background: #EFEFEF; }

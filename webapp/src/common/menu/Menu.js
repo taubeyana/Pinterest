@@ -8,15 +8,16 @@ class Menu extends Component {
     constructor(props) {
         super(props)
         this.state = { isDisplayed: true }
-        this.menuStyle = { display: "none" }
+        this.menuStyle = { visibility: "hidden" }
+        this.toggle = this.toggle.bind(this)
     }
     toggle() {
         this.setState({ isDisplayed: !this.state.isDisplayed })
         if  (this.state.isDisplayed === true) {
-            this.menuStyle = { display: "block" }
+            this.menuStyle = { visibility: "visible" }
         }
         else {
-            this.menuStyle = { display: "none" }
+            this.menuStyle = { visibility: "hidden" }
         }
     }
     render() {
@@ -27,7 +28,7 @@ class Menu extends Component {
                         faIcon = { this.props.item.menuIcon } 
                         className = { this.props.item.name + "-menu-btn menu-btn" } 
                         buttonType = { this.props.item.buttonType } 
-                        handleClick = { () => this.toggle.bind(this)() }/> : null
+                        handleClick = { () => this.toggle() }/> : null
                 }
                 {
                     this.props.item.menuItems ?

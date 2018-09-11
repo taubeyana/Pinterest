@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './LoadingGif.css'
 import gif from './../../img/loading.gif';
 
-class LoadingGif extends Component {
-    render() {
-        return (
-            <img className = "loading-gif" src = { gif } alt="loading-gif"/>
-        )
-    }
+const LoadingGif = props => {
+    return (
+        <img className = "loading-gif" src = { gif } alt="loading-gif"/>
+    )
 }
 export default LoadingGif;

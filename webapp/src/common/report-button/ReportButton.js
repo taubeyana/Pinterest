@@ -1,16 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './ReportButton.css';
 import Button from './../button/Button';
 
-class ReportButton extends Component {
-    render() {
-        return(
-            <Button 
-                buttonType = "button" 
-                text = "Report" 
-                faIcon = "ban" 
-                className = "report-btn"/>
-        )
-    }
+const ReportButton = () => {
+    return(
+        <Button 
+        buttonType = "button" 
+        text = "Report" 
+        faIcon = "ban" 
+        className = "report-btn"
+        />
+    )
 }
 export default ReportButton;

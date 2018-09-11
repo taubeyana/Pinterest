@@ -33,7 +33,7 @@ class OptionsMenu extends Component {
     render() {
         return (
             this.state.menus.map(item => {
-              return  <Menu item={item} key={uniqid()}>
+              return  <Menu item={ item } key={ uniqid() }>
                     <SendButton/>
                     <ReportButton/>
                 </Menu>
@@ -43,9 +43,3 @@ class OptionsMenu extends Component {
 }
 
 export default OptionsMenu;
-
-
-// <Menu data={this.state.menus}>
-//                 <SendButton/>
-//                 <ReportButton/>
-//             </Menu>
