@@ -12,7 +12,8 @@ class Header extends Component {
 
         this.currentUser = {
             name: 'Yana',
-            img: 'https://goo.gl/ryHGRR'
+            img: 'https://goo.gl/ryHGRR',
+            username: 'taubeyana'
         }
     }
     render() {
@@ -22,7 +23,8 @@ class Header extends Component {
                     buttonType = "link" 
                     className = "logo" 
                     img = { logoimg } 
-                    alt = "logoimg"/>
+                    alt = "logoimg"
+                    href = "/"/>
                 <Search/>
                 <HeaderTabs user = {  this.currentUser }/>
                 <HeaderMenus/>

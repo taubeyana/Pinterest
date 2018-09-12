@@ -3,6 +3,20 @@ import './Button.css';
 import ProfilePicture from './../profile-picture/ProfilePicture';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+// ----- Button creation props-----: 
+// 
+// --- Important ---:
+//   
+//      buttonType: button or link
+// 
+// --- Optional ---:
+// 
+//  - Shared props for buttons and links: 
+//      src, alt, className, text, faIcon
+// 
+//  - For links:  href, target
+//  - For buttons: type, handleClick
+
 class Button extends Component {
     renderInnerButton(props) {
         return (

@@ -1,6 +1,8 @@
-input {
+input, textarea {
   border: none;
-  outline: none; }
+  outline: none;
+  font: inherit;
+  resize: none; }
 
 button {
   border: none;

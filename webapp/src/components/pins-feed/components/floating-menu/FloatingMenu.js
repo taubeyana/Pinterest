@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './FloatingMenu.css';
-import Menu from './../../common/menu/Menu';
+import Menu from './../../../../common/menu/Menu';
 import uniqid from 'uniqid';
 
 class FloatingMenu extends Component {

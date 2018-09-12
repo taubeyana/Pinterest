@@ -1,6 +1,10 @@
-input {
+@import "vars";
+
+input, textarea {
   border: none;
   outline: none;
+  font: inherit;
+  resize: none;
 }
 
 button {
@@ -40,3 +44,4 @@ a:visited {
     color: inherit;
     cursor: auto;
 }
+

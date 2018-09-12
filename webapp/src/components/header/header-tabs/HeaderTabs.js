@@ -12,28 +12,28 @@ class HeaderTabs extends Component {
                     text: "Home",
                     className: "header-tab",
                     buttonType: 'link',
-                    href: "#"
+                    href: "/"
                 },
                 {
                     text: "Following",
                     faIcon: "user-friends",
                     className: "header-tab",
                     buttonType: 'link',
-                    href: "#"
+                    href: "/following"
                 },
                 {
                     text: "Explore",
                     className: "header-tab",
                     faIcon: "compass",
                     buttonType: 'link',
-                    href: "#"
+                    href: "/explore"
                 },
                 {
                     text: this.props.user.name,
                     img: this.props.user.img,
                     className: "header-tab",
                     buttonType: 'link',
-                    href: "#"
+                    href: this.props.user.username
                 },
             ]
         }

@@ -6,7 +6,7 @@ import uniqid from 'uniqid';
 class HeaderMenus extends Component {
     constructor(props) {
         super(props);
-        this.toggleMenu = this.toggleMenu.bind(this)
+        // this.toggleMenu = this.toggleMenu.bind(this)
         this.state = {
             menus: [
                 {
@@ -51,11 +51,11 @@ class HeaderMenus extends Component {
             
         }
     }
-    toggleMenu(index)  {
-        let currentState = { ...this.state }
-        let updatedState = currentState.menus[index].isDisplayed = !currentState.menus[index].isDisplayed;
-        this.setState({ updatedState })
-    }
+    // toggleMenu(index)  {
+    //     let currentState = { ...this.state }
+    //     let updatedState = currentState.menus[index].isDisplayed = !currentState.menus[index].isDisplayed;
+    //     this.setState({ updatedState })
+    // }
     render() {
         return (
             <div className = "header-menus">

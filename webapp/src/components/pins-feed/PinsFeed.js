@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import './PinsFeed.css';
 import GridBox from './components/grid-box/GridBox';
 import GetPinsService from './../../services/GetPinsService';
+import FloatingMenu from './components/floating-menu/FloatingMenu';
+import NewPinModal from './components/new-pin-modal/newPinModal'
+
+
 
 class PinsFeed extends Component {
     constructor(props) {
@@ -29,6 +33,8 @@ class PinsFeed extends Component {
                         state = { this.state.loading } 
                         data = { this.state.pins }/>
                 </div>
+                <FloatingMenu />
+                <NewPinModal/>
             </div>
         );
     }
