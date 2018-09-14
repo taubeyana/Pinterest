@@ -12,8 +12,10 @@ class PinsFeed extends Component {
         super(props)
         this.state = {
             loading: true,
-            pins: []
-        }
+            pins: [],
+            modalOpen: true
+        };
+        this.handleModal = this.handleModal.bind(this)
     }
     
     componentDidMount() {
@@ -25,6 +27,12 @@ class PinsFeed extends Component {
         .catch(e => console.log(e))
     }
 
+    handleModal(e) {
+        // console.log(e)
+        this.setState({modalOpen: false})
+    }
+
+
     render() {
         return (
             <div className = "pins-feed">
@@ -34,7 +42,7 @@ class PinsFeed extends Component {
                         data = { this.state.pins }/>
                 </div>
                 <FloatingMenu />
-                <NewPinModal/>
+                {/*<NewPinModal modalOpen = { this.state.modalOpen } modalClose = { this.handleModal }/>*/}
             </div>
         );
     }

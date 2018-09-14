@@ -6,7 +6,6 @@ import uniqid from 'uniqid';
 class HeaderMenus extends Component {
     constructor(props) {
         super(props);
-        // this.toggleMenu = this.toggleMenu.bind(this)
         this.state = {
             menus: [
                 {
@@ -34,13 +33,15 @@ class HeaderMenus extends Component {
                             text: 'Settings',
                             buttonType: 'button',
                             faIcon: null,
-                            className: 'settings-btn'
+                            className: 'settings-btn',
+                            handleClick: this.handleClick
                         },
                         {
                             text: 'Logout',
                             buttonType: 'button',
                             faIcon: null,
-                            className: 'logout-btn'
+                            className: 'logout-btn',
+                            handleClick: this.handleClick
                         }
                     ],
                     isDisplayed: true,
@@ -51,11 +52,9 @@ class HeaderMenus extends Component {
             
         }
     }
-    // toggleMenu(index)  {
-    //     let currentState = { ...this.state }
-    //     let updatedState = currentState.menus[index].isDisplayed = !currentState.menus[index].isDisplayed;
-    //     this.setState({ updatedState })
-    // }
+    handleClick = () => {
+        console.log('ok')
+    }
     render() {
         return (
             <div className = "header-menus">

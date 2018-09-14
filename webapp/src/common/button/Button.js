@@ -47,6 +47,7 @@ class Button extends Component {
             return (
                 <a  href = { this.props.href }
                     target = { this.props.target }
+                    id = { this.props.id }
                     className = { "link-btn " + this.props.className }>
                     { this.renderInnerButton(this.props) }
                 </a> 
@@ -54,6 +55,7 @@ class Button extends Component {
         } else if (this.props.buttonType === 'button') {
             return (
                 <button 
+                    id = { this.props.id }
                     type = { this.props.type } 
                     className = { "btn " + this.props.className } 
                     onClick = { this.props.handleClick }>

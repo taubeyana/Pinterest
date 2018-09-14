@@ -28,7 +28,7 @@ class Menu extends Component {
                         faIcon = { this.props.item.menuIcon } 
                         className = { this.props.item.name + "-menu-btn menu-btn" } 
                         buttonType = { this.props.item.buttonType } 
-                        handleClick = { () => this.toggle() }/> : null
+                        handleClick = { (e) => this.toggle() }/> : null
                 }
                 {
                     this.props.item.menuItems ?
@@ -43,7 +43,9 @@ class Menu extends Component {
                                                             faIcon = { btn.faIcon } 
                                                             buttonType = { btn.buttonType } 
                                                             className = { btn.className } 
-                                                            key = { uniqid() } />
+                                                            key = { uniqid() }
+                                                            id = { btn.id }
+                                                            handleClick = {(e) => btn.handleClick(e) } />
                                                     )}
                     { this.props.children }
                         </div>
