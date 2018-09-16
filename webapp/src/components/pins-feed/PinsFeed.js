@@ -3,9 +3,6 @@ import './PinsFeed.css';
 import GridBox from './components/grid-box/GridBox';
 import GetPinsService from './../../services/GetPinsService';
 import FloatingMenu from './components/floating-menu/FloatingMenu';
-import NewPinModal from './components/new-pin-modal/newPinModal'
-
-
 
 class PinsFeed extends Component {
     constructor(props) {
@@ -28,10 +25,8 @@ class PinsFeed extends Component {
     }
 
     handleModal(e) {
-        // console.log(e)
         this.setState({modalOpen: false})
     }
-
 
     render() {
         return (
@@ -42,7 +37,6 @@ class PinsFeed extends Component {
                         data = { this.state.pins }/>
                 </div>
                 <FloatingMenu />
-                {/*<NewPinModal modalOpen = { this.state.modalOpen } modalClose = { this.handleModal }/>*/}
             </div>
         );
     }

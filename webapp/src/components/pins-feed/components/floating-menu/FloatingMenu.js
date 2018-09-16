@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './FloatingMenu.css';
 import Menu from './../../../../common/menu/Menu';
 import uniqid from 'uniqid';
@@ -13,7 +13,6 @@ class FloatingMenu extends Component {
                     name: "add",
                     menuIcon: "plus",
                     buttonType: 'button',
-                    // handleClick: this.handleModal,
                     menuItems: [
                         {
                             text: "Upload a Pin",
@@ -40,16 +39,15 @@ class FloatingMenu extends Component {
             ],
             modalOpen: false,
             modalType: '',
-        },
+        }
         this.handleModal = this.handleModal.bind(this)
         this.handleModalType = this.handleModalType.bind(this)
     }
-    handleModalType(type, index) {
+    handleModalType(type) {
         this.setState({ modalType: type})
     }
 
     handleModal(e) {
-        console.log(e.target.id);
         this.setState({modalOpen: !this.state.modalOpen})
         switch (e.target.id) {
             case "fromUrl":
@@ -58,14 +56,13 @@ class FloatingMenu extends Component {
             case "userCustom":
                 this.setState({modalType: "userCustom"})
                 break;
+            default:
+                return;
         }
-        // let newstate = current.modals[index].modalOpen = !current.modals[index].modalOpen;
-        // this.setState(newstate)
-        // this.setState({this.state.modals[index].modalOpen=  !this.state.modals[index].modalOpen})
     }
     render() {
         return (
-            <React.Fragment>
+            <Fragment>
                 { this.state.menus
                 .map(item => <Menu item = { item } key = { uniqid() } />)}
                {<NewPinModal 
@@ -73,11 +70,8 @@ class FloatingMenu extends Component {
                     modalClose = { this.handleModal }
                     modalType = { this.state.modalType }
                     modalTypes = { this.state.menuItems }
-               handleModalType = { this.handleModalType }/>}
-               {/*this.state.modals.map((modal,index) => {
-                   return <NewPinModal {...modal} modalClose= {this.handleModal}/>
-               })*/}
-            </React.Fragment>
+                    handleModalType = { this.handleModalType }/>}
+            </Fragment>
         );
     }
 }

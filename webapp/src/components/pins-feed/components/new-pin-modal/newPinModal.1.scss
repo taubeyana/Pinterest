@@ -1,0 +1,79 @@
+@import '../../../../vars';
+
+.new-pin-modal {
+    // display: none;
+    & .btn {
+        border-radius: 5px;
+        & span {
+            padding: 5px;
+            margin: 0;
+        }
+    }
+}
+
+h1 {
+    width: 100%;
+    margin: 0;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 28px;
+    border-bottom: 1px solid $bordercolorgray;
+}
+.content-wrapper {
+    // display: flex;
+    // justify-content: center;
+    padding: 25px 90px;
+    & span {
+        padding: 5px;
+    }
+}
+
+.upload-area {
+    height: 360px;
+    width: 40%;
+    border: dashed 2px gray;
+    border-radius: 10px;
+}
+.form-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 18px;
+    padding: 11px;
+    background-color: inherit;
+    width: 60%;
+    
+}
+.form-input, .form-textarea {
+    padding: 9px;
+    border-radius: 5px;
+    border: 0.4px solid black;
+    // width: 
+}
+.form-textarea {
+    margin: 0px;
+    height: 165px;
+}
+.footer-buttons {
+    display: flex;
+    padding: 15px;
+    margin-top: 49px;
+    border-top: 1px solid $bordercolorgray;
+}
+
+// .submit-btn {
+//     position: absolute;
+//     bottom: 15px;
+//     right: 15px;
+    
+// }
+
+.footer-buttons .btn, .submit-btn {
+    background: $bordercolorgray;
+    
+    color: gray;
+    &:focus {
+        border: 1px solid $bordercolorgray;
+        background: unset;
+        color: black;
+    }
+}

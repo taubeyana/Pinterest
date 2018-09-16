@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './Modal.css'
 import Backdrop from '../backdrop/Backdrop';
 
 const Modal = props => {
     return (
        props.modalOpen ? 
-        (<div>
+        (<Fragment>
             <Backdrop modalClose = { props.modalClose } ></Backdrop>
             <div className = {props.className + " modal"}> 
                 {props.children}
             </div>
-        </div>) :
+        </Fragment>) :
         null
     )
 }
