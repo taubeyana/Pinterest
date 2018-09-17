@@ -29,5 +29,5 @@ library.add(
     faTimes, 
     faAngleDown,
     faUserFriends,
-    faCompass
+    faCompass,
 );

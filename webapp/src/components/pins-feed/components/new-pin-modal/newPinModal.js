@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import './newPinModal.css';
 import Modal from './../../../../common/modal/Modal';
 import Button from '../../../../common/button/Button';
+import CloseButton from '../../../../common/close-button/CloseButton';
 
 
 const NewPinModal = props => {
@@ -46,6 +47,13 @@ const NewPinModal = props => {
             modalOpen = { props.modalOpen } 
             modalClose = { props.modalClose }>
             <h1> Create Pin </h1>
+            {/*<Button 
+                className = "close-btn"
+                type = "button"
+                buttonType = "button"
+                faIcon = "times">
+            </Button>*/}
+            <CloseButton handleClick={props.modalClose}/>
             <div className="content-wrapper"> 
                 { renderModal(props.modalType) }
             </div>
