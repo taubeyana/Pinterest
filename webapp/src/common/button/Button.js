@@ -55,10 +55,12 @@ class Button extends Component {
         } else if (this.props.buttonType === 'button') {
             return (
                 <button 
+                    
                     id = { this.props.id }
                     type = { this.props.type } 
                     className = { "btn " + this.props.className } 
-                    onClick = { this.props.handleClick }>
+                    onClick = { this.props.handleClick }
+                    onFocus = { this.props.handleFocus } >
                     { this.renderInnerButton(this.props) }
                 </button>
             );

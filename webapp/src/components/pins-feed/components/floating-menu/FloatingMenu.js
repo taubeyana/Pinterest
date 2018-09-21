@@ -43,22 +43,16 @@ class FloatingMenu extends Component {
         this.handleModal = this.handleModal.bind(this)
         this.handleModalType = this.handleModalType.bind(this)
     }
-    handleModalType(type) {
-        this.setState({ modalType: type})
+    handleModalType(e,type) {
+        let modalType;
+        e ? modalType = e.target.id || type : modalType = type
+        this.setState({modalType: modalType})
     }
 
     handleModal(e) {
         this.setState({modalOpen: !this.state.modalOpen})
-        switch (e.target.id) {
-            case "fromUrl":
-                this.setState({modalType: "fromUrl"})
-                break;
-            case "userCustom":
-                this.setState({modalType: "userCustom"})
-                break;
-            default:
-                return;
-        }
+        let modalType = e.target.id;
+        this.setState({modalType: modalType})
     }
     render() {
         return (

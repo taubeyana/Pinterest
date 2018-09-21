@@ -6,6 +6,50 @@ import CloseButton from '../../../../common/close-button/CloseButton';
 
 
 const NewPinModal = props => {
+    const renderButtons = (modalType) => {
+        switch (modalType) {
+            case 'userCustom':
+                return (
+                    <Fragment>
+                    <Button
+                    buttonType = "button"
+                    type = "button"
+                    className = {"upload-pin-btn focused-btn"}
+                    text = "Upload Pin"
+                    handleClick = { (e) => props.handleModalType(e,"userCustom")}>>
+                </Button>
+                <Button
+                    buttonType = "button"
+                    type = "button"
+                    className = "save-from-site-btn"
+                    text = "Save from site"
+                    handleClick = { (e) => props.handleModalType(e,"fromUrl")}>>>
+                </Button>
+                </Fragment>
+                )
+            case "fromUrl":
+                return(
+                    <Fragment>
+                    <Button
+                    buttonType = "button"
+                    type = "button"
+                    className = {"upload-pin-btn"}
+                    text = "Upload Pin"
+                    handleClick = { (e) => props.handleModalType(e,"userCustom")}>>
+                </Button>
+                <Button
+                    buttonType = "button"
+                    type = "button"
+                    className = "save-from-site-btn focused-btn"
+                    text = "Save from site"
+                    handleClick = { (e) => props.handleModalType(e,"fromUrl")}>>>
+                </Button>
+                </Fragment>
+                )
+            default:
+                return null;
+        }
+    }
     const renderModal = (modalType) => {
         let input;
         switch (modalType) {
@@ -47,31 +91,12 @@ const NewPinModal = props => {
             modalOpen = { props.modalOpen } 
             modalClose = { props.modalClose }>
             <h1> Create Pin </h1>
-            {/*<Button 
-                className = "close-btn"
-                type = "button"
-                buttonType = "button"
-                faIcon = "times">
-            </Button>*/}
-            <CloseButton handleClick={props.modalClose}/>
+            <CloseButton handleClick = { props.modalClose }/>
             <div className="content-wrapper"> 
                 { renderModal(props.modalType) }
             </div>
             <div className = "footer-buttons">
-                <Button
-                    buttonType = "button"
-                    type = "button"
-                    className = "upload-pin-btn"
-                    text = "Upload Pin"
-                    handleClick = { (e) => props.handleModalType("userCustom")}>>
-                </Button>
-                <Button
-                    buttonType = "button"
-                    type = "button"
-                    className = "save-from-site-btn"
-                    text = "Save from site"
-                    handleClick = { (e) => props.handleModalType("fromUrl")}>>>
-                </Button>
+               {renderButtons(props.modalType)}
                 <Button
                     buttonType = "button"
                     type = "submit"

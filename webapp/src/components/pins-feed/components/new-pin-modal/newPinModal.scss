@@ -70,15 +70,22 @@
             padding: 5px;
             margin: 0;
         }
-        &:focus {
+        &:active {
+            border: 3px solid #7FC1FF;
+        }
+        &.focused-btn {
             border: 1px solid $bordercolorgray;
-            background: unset;
+            background-color: white;
             color: black;
         }
     }
 
 }
-
+.focused-btn  {
+        border: 1px solid $bordercolorgray;
+        background-color: white;
+        color: black;
+}
 
 .submit-btn {
     position: absolute;
