@@ -1,0 +1,15 @@
+.dropzone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .fa-camera {
+        font-size: 30px;
+    }
+    span {
+        line-break: auto;
+        width: 135px;
+        text-align: center;
+        font-weight: bold;
+    }
+}

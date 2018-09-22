@@ -3,6 +3,7 @@ import './newPinModal.css';
 import Modal from './../../../../common/modal/Modal';
 import Button from '../../../../common/button/Button';
 import CloseButton from '../../../../common/close-button/CloseButton';
+import ImgUploadZone from '../../../../common/img-upload-zone/ImgUploadZone';
 
 
 const NewPinModal = props => {
@@ -57,7 +58,7 @@ const NewPinModal = props => {
                 input = "Website"
                 return (
                     <Fragment>
-                        <div className = "upload-area"></div>
+                        <ImgUploadZone className = "upload-zone" />
                         <div className = "form-input-wrapper">
                             <span> { input } </span>
                             <input 

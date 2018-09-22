@@ -19,7 +19,7 @@
         width: 80%;
         flex-direction: row;
         margin: 25px auto;
-        .upload-area {
+        .upload-zone {
             height: 360px;
             width: 40%;
             border: dashed 2px #8E8E8E;
@@ -80,11 +80,6 @@
         }
     }
 
-}
-.focused-btn  {
-        border: 1px solid $bordercolorgray;
-        background-color: white;
-        color: black;
 }
 
 .submit-btn {

@@ -13,7 +13,8 @@ import {
     faTimes, 
     faAngleDown, 
     faUserFriends,
-    faCompass
+    faCompass,
+    faCamera
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
@@ -30,4 +31,5 @@ library.add(
     faAngleDown,
     faUserFriends,
     faCompass,
+    faCamera
 );
