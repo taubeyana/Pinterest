@@ -1,4 +1,4 @@
-class GetUsersService {
+class GetPinsService {
     static getRelevantPins() {
         return fetch('/api/pins')
         .then(res => res.json())
@@ -7,4 +7,4 @@ class GetUsersService {
     }
 }
 
-export default GetUsersService;
+export default GetPinsService;
