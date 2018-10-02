@@ -38,7 +38,7 @@ class FloatingMenu extends Component {
                 },
             ],
             modalOpen: false,
-            modalType: '',
+            modalType: 'userCustom',
         }
         this.handleModal = this.handleModal.bind(this)
         this.handleModalType = this.handleModalType.bind(this)
