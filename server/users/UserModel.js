@@ -1,4 +1,4 @@
-const db = require('../dbapi');
+const db = require('../pinterestDB');
 
 const UserSchema = new db.Schema({
     firstName: String,
