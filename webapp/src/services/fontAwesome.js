@@ -31,5 +31,5 @@ library.add(
     faAngleDown,
     faUserFriends,
     faCompass,
-    faCamera
+    faCamera,
 );
