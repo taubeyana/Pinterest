@@ -1,5 +1,4 @@
 const db = require('../pinterestDB');
-// const pins = require('./../../webapp/src/temp');
 
 const PinSchema = db.Schema({
     title: String,
