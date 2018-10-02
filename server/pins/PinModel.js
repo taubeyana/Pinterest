@@ -1,4 +1,4 @@
-const db = require('./../db');
+const db = require('../dbapi');
 // const pins = require('./../../webapp/src/temp');
 
 const PinSchema = db.Schema({
