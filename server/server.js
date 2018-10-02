@@ -11,7 +11,7 @@ app.use('/api/users/', users);
 app.use('/api/pins/', pins);
 app.use(express.static(buildFolder))
 
-app.listen(9090,(error)=>{
+app.listen(process.env.PORT || 9090,(error)=>{
     if(error)console.log(error.message);
     console.log('listening on http://localhost:9090')
 });
