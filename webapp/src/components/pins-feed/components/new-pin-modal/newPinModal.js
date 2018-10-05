@@ -55,7 +55,7 @@ class NewPinModal extends Component  {
         
     }
     onFormSubmit(e) {
-        e.preventDefault()
+        // e.preventDefault()
         const data = new FormData(e.target);
         let formdata = {
             link: data.get('website'),
