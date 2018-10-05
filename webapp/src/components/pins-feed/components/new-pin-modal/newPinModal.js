@@ -55,7 +55,7 @@ class NewPinModal extends Component  {
         
     }
     onFormSubmit(e) {
-        // e.preventDefault()
+        e.preventDefault()
         const data = new FormData(e.target);
         let formdata = {
             link: data.get('website'),
@@ -66,10 +66,17 @@ class NewPinModal extends Component  {
         getUrlTitle(data.get('website'))
         .then(title => {
             formdata.title = title;
-            Axios.post('/api/pins',formdata)
-            .then(data => console.log(data))
+            return formdata
+            
+        }).then(data => {
+            Axios.post('/api/pins',data)
         })
-        .catch(err => console.log(err))
+        
+        
+        //     Axios.post('/api/pins',formdata)
+        //     .then(data => console.log(data))
+        
+        // .catch(err => console.log(err))
         
     
     }

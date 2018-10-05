@@ -1,17 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const cheerio = require('cheerio');
-const request = require('request');
+const rp = require('request-promise')
 
 router.get('/', (req,res) => {
-    let webpageTitle;
-    request(req.query.url, (error,response,body) => {
-        if (!error && response.statusCode == 200) {
-            const $ = cheerio.load(body);
-            webpageTitle = $("title").text();
-            res.send(webpageTitle)
-        }
-    });
+    let title = ''
+    rp(req.query.url)
+    .then(data => {
+        const $ = cheerio.load(data)
+        title = $('title').text()
+        res.send(title)
+    })
+    .catch(err => console.log(err.message))
 })
 
 module.exports = router

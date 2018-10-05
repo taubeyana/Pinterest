@@ -7,10 +7,10 @@ import Button from './../../../../common/button/Button';
 
 class Pin extends Component {
     shortSiteLink(link) {
-        const regex = /^(https?:\/\/)(.+?\.)?(.*?\..+?)(\/)(.+)?/gm
-        return regex.exec(link)[3]
+        const siteURL = new URL(link)
+        return siteURL.host
     }
-    truncateString(str) {
+    truncateString(str = '') {
         return  str.length > 50 ? str.slice(0, 50) + '...' : str;
     }
     render() {
@@ -22,7 +22,7 @@ class Pin extends Component {
                         style = { this.menuStyle } 
                         text = { this.shortSiteLink(this.props.data.link) } 
                         href = { this.props.data.link } 
-                        buttonType="link" 
+                        buttonType = "link" 
                         faIcon = "external-link-alt" 
                         className = "pin-link"/>
                 </div>
