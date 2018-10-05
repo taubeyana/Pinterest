@@ -22,15 +22,15 @@ class FloatingMenu extends Component {
                             id: 'userCustom',
                             handleClick: this.handleModal.bind(this),
                         },
-                        {
-                            text: "Save from web",
-                            buttonType: 'button',
-                            modalType: 'fromUrl',
-                            handleClick: this.handleModal.bind(this),
-                            faIcon: "globe",
-                            id: 'fromUrl',
-                            className: 'save-from-web-btn'
-                        }
+                        // {
+                        //     text: "Save from web",
+                        //     buttonType: 'button',
+                        //     modalType: 'fromUrl',
+                        //     handleClick: this.handleModal.bind(this),
+                        //     faIcon: "globe",
+                        //     id: 'fromUrl',
+                        //     className: 'save-from-web-btn'
+                        // }
                     ],
                     menuType: "right",
                     isVisible: false,

@@ -17,6 +17,7 @@ router.get('/:pinId', (req,res) => {
 
 router.post('/', (req,res) => {
     const pin = new Pin(req.body);
+    console.log(req.body)
     pin.save()
     .then(pin => res.send(pin))
     .catch(err => res.status(400).send(err.message));

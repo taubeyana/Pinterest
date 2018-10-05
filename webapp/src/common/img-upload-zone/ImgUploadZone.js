@@ -24,14 +24,25 @@ class ImgUploadZone extends Component {
         })
     }
     render() {
+        let dropzoneStyle = {
+            isvisible: false,
+            backgroundImage: 'none',
+            backgroundSize: 'cover'
+        }
         return (
-            <Dropzone
+            <Dropzone 
+                style = {this.props.style}
+                required
                 className = { "dropzone " + this.props.className }
                 multiple={false}
                 accept="image/*"
-                onDrop={this.onImageDrop.bind(this)}>
-                <FontAwesomeIcon icon="camera"/>
-                <span> Drag and drop or click to upload </span>
+                onDrop={(files) => this.props.onDrop(files)}
+                >
+                 {this.props.style.isvisible ?  null :<div className = "dz-content">
+                 <FontAwesomeIcon icon="camera"/>
+                 <span> Drag and drop or click to upload </span>
+             </div>  }
+                
             </Dropzone>
         )
         
