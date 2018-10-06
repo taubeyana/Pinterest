@@ -1,4 +1,4 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import './newPinModal.css';
 import Modal from './../../../../common/modal/Modal';
 import Button from '../../../../common/button/Button';
@@ -8,7 +8,6 @@ import uploadImagesService from '../../../../services/uploadImagesService';
 import Input from '../../../../common/input/Input';
 import Axios from 'axios';
 import getUrlTitle from '../../../../services/getUrlTitle'
-
 
 class NewPinModal extends Component  {
     constructor(props) {
@@ -27,7 +26,6 @@ class NewPinModal extends Component  {
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center'
             }
-            
         }
     }
     onImageDrop(files) {
@@ -45,17 +43,11 @@ class NewPinModal extends Component  {
                 {...this.state, newPinForm:  
                 {...this.state.newPinForm, uploadedFileCloudinaryUrl:res.data.secure_url},
                 dropZoneStyling: {...this.state.dropZoneStyling, backgroundImage: `url(${res.data.secure_url})` }
-                
             })
         })
     }
-    gettitle(h) {
-        
-            return Axios.get(h).then(data => data)
-        
-    }
     onFormSubmit(e) {
-        // e.preventDefault()
+        e.preventDefault()
         const data = new FormData(e.target);
         let formdata = {
             link: data.get('website'),
@@ -70,18 +62,12 @@ class NewPinModal extends Component  {
             
         }).then(data => {
             Axios.post('/api/pins',data)
+            console.log(data)
         })
-        
-        
-        //     Axios.post('/api/pins',formdata)
-        //     .then(data => console.log(data))
-        
-        // .catch(err => console.log(err))
-        
-    
+        .then(()=>this.props.modalClose())
+        .catch(err => console.log(err))
     }
     render() {
-        // console.log(this.state)
         return (
         <Modal 
             className = "new-pin-modal" 

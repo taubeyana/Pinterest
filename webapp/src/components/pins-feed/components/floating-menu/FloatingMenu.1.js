@@ -21,7 +21,16 @@ class FloatingMenu extends Component {
                             className: 'upload-btn',
                             id: 'userCustom',
                             handleClick: this.handleModal.bind(this),
-                        }
+                        },
+                        // {
+                        //     text: "Save from web",
+                        //     buttonType: 'button',
+                        //     modalType: 'fromUrl',
+                        //     handleClick: this.handleModal.bind(this),
+                        //     faIcon: "globe",
+                        //     id: 'fromUrl',
+                        //     className: 'save-from-web-btn'
+                        // }
                     ],
                     menuType: "right",
                     isVisible: false,
@@ -29,12 +38,21 @@ class FloatingMenu extends Component {
                 },
             ],
             modalOpen: false,
+            modalType: 'userCustom',
         }
-
         this.handleModal = this.handleModal.bind(this)
+        // this.handleModalType = this.handleModalType.bind(this)
     }
-    handleModal() {
+    handleModalType(e,type) {
+        let modalType;
+        e ? modalType = e.target.id || type : modalType = type
+        this.setState({modalType: modalType})
+    }
+
+    handleModal(e) {
         this.setState({modalOpen: !this.state.modalOpen})
+        // let modalType = e.target.id;
+        // this.setState({modalType: modalType})
     }
     render() {
         return (
@@ -44,6 +62,7 @@ class FloatingMenu extends Component {
                {<NewPinModal 
                     modalOpen = { this.state.modalOpen } 
                     modalClose = { this.handleModal }
+                    modalType = { this.state.modalType }
                     modalTypes = { this.state.menuItems }
                     handleModalType = { this.handleModalType }/>}
             </Fragment>
