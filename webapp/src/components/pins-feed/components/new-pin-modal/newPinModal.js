@@ -33,7 +33,6 @@ class NewPinModal extends Component  {
                         uploadedFile: files[0], 
                         dropZoneStyling: 
                         {...this.state.dropZoneStyling, 
-                        backgroundImage:`url(https://i.kinja-img.com/gawker-media/image/upload/s--LytxZcab--/c_fit,fl_progressive,q_80,w_636/1481054780733836946.gif)`, 
                         isvisible: true }}
         this.setState(newState)
 
@@ -64,7 +63,10 @@ class NewPinModal extends Component  {
             Axios.post('/api/pins',data)
             console.log(data)
         })
-        .then(()=>this.props.modalClose())
+        .then( () => {
+            this.props.modalClose() 
+            this.setState({ ...this.state, dropZoneStyling: { ...this.state.dropZoneStyling, backgroundImage: 'none', isvisible: false }})
+        })
         .catch(err => console.log(err))
     }
     render() {

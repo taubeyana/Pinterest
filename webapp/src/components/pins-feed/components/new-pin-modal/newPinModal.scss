@@ -1,10 +1,12 @@
 @import '../../../../vars';
 
 .new-pin-modal {
-    display: grid;
-    grid-template-rows: 15% 73% 12%;
     overflow: hidden;
-
+    form {
+        display: grid;
+        grid-template-rows: 15% 73% 12%;
+        height: 100%;
+    }
     h1 {
         grid-row: 1/2;
         margin: 20px 0;
@@ -82,9 +84,13 @@
 
 }
 
-.submit-btn {
+.submit-btn.btn {
     position: absolute;
     bottom: 15px;
     right: 15px;
-    
+    background: #AD081B;
+    color: white;
+    &:hover {
+        background: darken(#AD081B,10%)
+    }
 }

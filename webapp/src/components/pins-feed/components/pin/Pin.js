@@ -19,14 +19,14 @@ class Pin extends Component {
                 <div className = "img-wrapper">
                     <img src = { this.props.data.img } alt = { this.props.data.alt } />
                     <Button 
-                        style = { this.menuStyle } 
+                        // style = { this.menuStyle } 
                         text = { this.shortSiteLink(this.props.data.link) } 
                         href = { this.props.data.link } 
                         buttonType = "link" 
                         faIcon = "external-link-alt" 
                         className = "pin-link"/>
                 </div>
-                <SelectMenu style = { this.menuStyle }/>
+                {/*<SelectMenu style = { this.menuStyle }/>*/}
                 <div className = "options-wrapper">
                     <span>{ this.truncateString(this.props.data.title) }</span>
                     <OptionsMenu/>
