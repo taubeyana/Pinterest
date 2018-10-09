@@ -78,7 +78,7 @@ class NewPinModal extends Component  {
             <form onSubmit={this.onFormSubmit.bind(this)}>
                 <h1> Create Pin </h1>
                 <CloseButton handleClick = { this.props.modalClose }/>
-                <div className="content-wrapper"> 
+                <div className="modal-content-wrapper"> 
                     <ImgUploadZone style = {this.state.dropZoneStyling} onDrop = {this.onImageDrop.bind(this)} className = "upload-zone" />
                     <div className = "form-input-wrapper">
                         <span> Website </span>

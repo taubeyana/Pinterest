@@ -1,6 +1,6 @@
 import React from 'react';
 import './LoadingGif.css'
-import gif from './../../img/loading.gif';
+import gif from '../../img/loading.gif';
 
 const LoadingGif = props => {
     return (

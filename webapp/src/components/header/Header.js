@@ -20,11 +20,11 @@ class Header extends Component {
         return (
             <header>
                 <Button 
-                    buttonType = "link" 
+                    buttonType = "router-link" 
                     className = "logo" 
                     img = { logoimg } 
                     alt = "logoimg"
-                    href = "/"/>
+                    to = "/"/>
                 <Search/>
                 <HeaderTabs user = {  this.currentUser }/>
                 <HeaderMenus/>

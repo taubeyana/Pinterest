@@ -18,16 +18,7 @@
     right: 12px;
     top: -11px;
 }
-// .triangle-right {
-//     border: 10px solid transparent;
-//     border-right: none;
-//     border-left: 10px solid #fff;
-//     width: 0;
-//     height: 0;
-//     position: absolute;
-//     right: 2px;
-//     top: -10px;
-// }
+
 .triangle-border-right {
     border: 11px solid transparent;
     border-right: none;
@@ -36,7 +27,7 @@
     height: 0;
     position: absolute;
     right: -12px;
-    top: 13px;
+    top: 10px;
 }
 
 @mixin triangle($direction, $color, $big, $small) {

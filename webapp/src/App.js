@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import Header from './components/header/Header';
-import PinsFeed from './components/pins-feed/PinsFeed';
 import './App.css';
 import './services/fontAwesome'
+import configureStore from './store/configureStore'
+import { Provider } from 'react-redux';
+import AppRouter from './router/AppRouter';
 
+const store = configureStore();
 
 class App extends Component {
   render() {
     return (
-      <div className = "App">
-        <Header/>
-        <PinsFeed/>
-      </div>
+      <Provider store = { store }>
+        <AppRouter/>
+      </Provider>
     );
   }
 }
-
 export default App;

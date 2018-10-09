@@ -3,6 +3,7 @@ import './Pin.css';
 import OptionsMenu from './components/options-menu/OptionsMenu';
 import SelectMenu from './../../../../common/select-menu/SelectMenu'
 import Button from './../../../../common/button/Button';
+import { NavLink, Redirect } from 'react-router-dom';
 
 
 class Pin extends Component {
@@ -15,23 +16,25 @@ class Pin extends Component {
     }
     render() {
         return (
+            
             <div className = 'pin grid-item' key={ this.props.data._id } >
                 <div className = "img-wrapper">
                     <img src = { this.props.data.img } alt = { this.props.data.alt } />
                     <Button 
-                        // style = { this.menuStyle } 
                         text = { this.shortSiteLink(this.props.data.link) } 
-                        href = { this.props.data.link } 
-                        buttonType = "link" 
+                        // to = { this.props.data.link } 
+                        buttonType = "button" 
                         faIcon = "external-link-alt" 
-                        className = "pin-link"/>
+                        className = "pin-link">
+                    </Button>
                 </div>
-                {/*<SelectMenu style = { this.menuStyle }/>*/}
+                {/*<SelectMenu />*/}
                 <div className = "options-wrapper">
                     <span>{ this.truncateString(this.props.data.title) }</span>
                     <OptionsMenu/>
                 </div>
             </div>
+            
         );
     }
 }

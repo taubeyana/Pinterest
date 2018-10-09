@@ -11,29 +11,29 @@ class HeaderTabs extends Component {
                 {
                     text: "Home",
                     className: "header-tab",
-                    buttonType: 'link',
-                    href: "/"
+                    buttonType: 'router-link',
+                    to: "/"
                 },
                 {
                     text: "Following",
                     faIcon: "user-friends",
                     className: "header-tab",
-                    buttonType: 'link',
-                    href: "/following"
+                    buttonType: 'router-link',
+                    to: "/following"
                 },
                 {
                     text: "Explore",
                     className: "header-tab",
                     faIcon: "compass",
-                    buttonType: 'link',
-                    href: "/explore"
+                    buttonType: 'router-link',
+                    to: "/explore"
                 },
                 {
                     text: this.props.user.name,
                     img: this.props.user.img,
                     className: "header-tab",
-                    buttonType: 'link',
-                    href: this.props.user.username
+                    buttonType: 'router-link',
+                    to: this.props.user.username
                 },
             ]
         }
@@ -43,8 +43,9 @@ class HeaderTabs extends Component {
             <div className = "header-tabs">
                 {
                     this.state.tabsData.map(item => <Button { ...item } key={ uniqid() }/>)
-                }   
+                }  
             </div>
+            
         );
     }
 }  

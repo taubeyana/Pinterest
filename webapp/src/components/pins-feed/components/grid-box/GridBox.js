@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import Masonry from 'react-masonry-component';
 import './GridBox.css'
 import Pin from './../pin/Pin';
-import LoadingImage from './../../../../common/loading-gif/LoadingGif';
+import LoadingImage from '../../../../common/loading-gif/LoadingGif';
 import uniqid from 'uniqid';
+import { connect } from 'react-redux';
 
 const masonryOptions = {
     transitionDuration: 0,
@@ -11,6 +12,7 @@ const masonryOptions = {
 };
 
 class GridBox extends Component {
+    
     render() {
         let childElements = [];
 
@@ -35,5 +37,9 @@ class GridBox extends Component {
         );
     }
 }
-
+// const mapStateToProps = state => {
+//     return {
+//         isLoading: state.pinsReducer.loading
+//     }
+// }
 export default GridBox;

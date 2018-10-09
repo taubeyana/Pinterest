@@ -11,7 +11,7 @@ class Menu extends Component {
         this.menuStyle = { visibility: "hidden" }
         this.toggle = this.toggle.bind(this)
     }
-    toggle() {
+    toggle(e) {
         this.setState({ isDisplayed: !this.state.isDisplayed })
         if  (this.state.isDisplayed === true) {
             this.menuStyle = { visibility: "visible" }
