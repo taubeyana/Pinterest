@@ -16,25 +16,25 @@ class Pin extends Component {
     }
     render() {
         return (
-            
-            <div className = 'pin grid-item' key={ this.props.data._id } >
-                <div className = "img-wrapper">
-                    <img src = { this.props.data.img } alt = { this.props.data.alt } />
-                    <Button 
-                        text = { this.shortSiteLink(this.props.data.link) } 
-                        // to = { this.props.data.link } 
-                        buttonType = "button" 
-                        faIcon = "external-link-alt" 
-                        className = "pin-link">
-                    </Button>
+            <NavLink to = {'/pins/' + this.props.data._id}>
+                <div className = 'pin grid-item' key={ this.props.data._id } >
+                    <div className = "img-wrapper">
+                        <img src = { this.props.data.img } alt = { this.props.data.alt } />
+                        <Button 
+                            text = { this.shortSiteLink(this.props.data.link) } 
+                            to = { this.props.data.link } 
+                            buttonType = "link" 
+                            faIcon = "external-link-alt" 
+                            className = "pin-link">
+                        </Button>
+                    </div>
+                    {/*<SelectMenu />*/}
+                    <div className = "options-wrapper">
+                        <span>{ this.truncateString(this.props.data.title) }</span>
+                        <OptionsMenu/>
+                    </div>
                 </div>
-                {/*<SelectMenu />*/}
-                <div className = "options-wrapper">
-                    <span>{ this.truncateString(this.props.data.title) }</span>
-                    <OptionsMenu/>
-                </div>
-            </div>
-            
+            </NavLink>
         );
     }
 }

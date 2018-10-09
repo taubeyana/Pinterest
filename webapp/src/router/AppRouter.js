@@ -14,6 +14,7 @@ const AppRouter = () => (
                 <Route exact path = '/' component = { PinsFeed }/>
                 <Route path = '/explore' component = { UnderConstruction }/>
                 <Route path = '/following' component = { UnderConstruction }/>
+                <Route path = '/pins/:id' component = { PinPage }/>
                 <Route component = { NotFoundPage } />
                 </Switch>
                 </Fragment>

@@ -37,8 +37,3 @@ a:visited {
   text-decoration: inherit;
   color: inherit;
   cursor: auto; }
-
-.content-wrapper {
-  position: absolute;
-  top: 85px;
-  width: 100%; }
