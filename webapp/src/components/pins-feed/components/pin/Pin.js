@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './Pin.css';
 import OptionsMenu from './components/options-menu/OptionsMenu';
 import SelectMenu from './../../../../common/select-menu/SelectMenu'
 import Button from './../../../../common/button/Button';
-import { NavLink, Redirect } from 'react-router-dom';
-
+import { NavLink } from 'react-router-dom';
+import {removeSelectedPin ,removePin} from '../../../../store/actions/pinsActions'
 
 class Pin extends Component {
+    constructor(props) {
+        super(props)
+        this.ref = this.props.data._id
+        this.state = {...this.props.data}
+    }
     shortSiteLink(link) {
         const siteURL = new URL(link)
         return siteURL.host
@@ -14,28 +20,35 @@ class Pin extends Component {
     truncateString(str = '') {
         return  str.length > 50 ? str.slice(0, 50) + '...' : str;
     }
+    handleClick(e) {
+        this.props.removeSelectedPin(this.ref)
+    }
     render() {
         return (
-            <NavLink to = {'/pins/' + this.props.data._id}>
-                <div className = 'pin grid-item' key={ this.props.data._id } >
-                    <div className = "img-wrapper">
+            <div className = 'pin grid-item' key={ this.props.data._id } >
+                <div className = "img-wrapper">
+                    <NavLink className = 'navlink'  target="_blank" to = { '/pins/' + this.props.data._id }>
                         <img src = { this.props.data.img } alt = { this.props.data.alt } />
-                        <Button 
-                            text = { this.shortSiteLink(this.props.data.link) } 
-                            to = { this.props.data.link } 
-                            buttonType = "link" 
-                            faIcon = "external-link-alt" 
-                            className = "pin-link">
-                        </Button>
-                    </div>
-                    {/*<SelectMenu />*/}
-                    <div className = "options-wrapper">
-                        <span>{ this.truncateString(this.props.data.title) }</span>
-                        <OptionsMenu/>
-                    </div>
+                    </NavLink>
+                    <Button 
+                        text = { this.shortSiteLink(this.props.data.link) } 
+                        href = { this.props.data.link } 
+                        buttonType = "link" 
+                        faIcon = "external-link-alt" 
+                        className = "pin-link">
+                    </Button>
                 </div>
-            </NavLink>
-        );
+                    {/*<SelectMenu />*/}
+                <div className = "options-wrapper">
+                    <span>{ this.truncateString(this.props.data.title) }</span>
+                    <OptionsMenu handleClick = { this.handleClick.bind(this) }/>
+                </div>
+            </div>);
     }
 }
-export default Pin;
+
+const mapDispatchToProps = (dispatch) => {
+    return {removeSelectedPin: (id) => dispatch(removeSelectedPin(id)),
+    removePin: (id) => dispatch(removePin(id))}
+}
+export default connect(null, mapDispatchToProps )(Pin);

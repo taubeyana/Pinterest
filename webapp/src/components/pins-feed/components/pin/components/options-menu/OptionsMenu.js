@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {ReactDOM, findDOMNode } from 'react-dom'
 import './OptionsMenu.css';
 import Menu from './../../../../../../common/menu/Menu';
 import SendButton from './../../../../../../common/send-button/SendButton';
@@ -16,10 +17,11 @@ class OptionsMenu extends Component {
                     buttonType: 'button',
                     menuItems: [
                         {
-                            text: 'Hide',
+                            text: 'Remove Pin',
                             buttonType: 'button',
                             faIcon: "times",
-                            className: 'hide-btn'
+                            className: 'hide-btn',
+                            handleClick: this.props.handleClick,
                         },
                     ],
                     menuType: "up",
@@ -33,13 +35,13 @@ class OptionsMenu extends Component {
     render() {
         return (
             this.state.menus.map(item => {
-              return  <Menu item={ item } key={ uniqid() }>
-                    <SendButton/>
-                    <ReportButton/>
-                </Menu>
+              return  <Menu item={ item } key={ uniqid()  } />
             })
         )
     }
 }
 
 export default OptionsMenu;
+
+// <SendButton/>
+// <ReportButton/>

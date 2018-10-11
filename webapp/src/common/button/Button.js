@@ -73,6 +73,7 @@ class Button extends Component {
                     return (
                         <NavLink to = { this.props.to }
                             id = { this.props.id }
+                            activeClassName = { this.props.activeClassName }
                             className = { "link-btn " + this.props.className }>
                             { this.renderInnerButton(this.props) }
                         </NavLink> 

@@ -16,11 +16,10 @@ const AppRouter = () => (
                 <Route path = '/following' component = { UnderConstruction }/>
                 <Route path = '/pins/:id' component = { PinPage }/>
                 <Route component = { NotFoundPage } />
-                </Switch>
-                </Fragment>
-                </BrowserRouter>
-                )
+            </Switch>
+        </Fragment>
+    </BrowserRouter>
+)
                 
-                export default AppRouter
+export default AppRouter
                 
-                // <Route path = '/pins/:id' component = { PinPage }/>

@@ -23,8 +23,25 @@
     display: grid;
     position: relative;
     border-radius: inherit;
+    .pin-link {
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+        border-radius: inherit;
+        display: none;
+    }
+    &:hover {
+        .pin-link {
+            display: flex;
+            background: white
+        }
+    }
 }
-
+ .navlink {
+     cursor: inherit;
+     border-radius: inherit;
+     display: inherit
+ }
 
 .pin .options-wrapper {
     display: flex;
@@ -33,24 +50,6 @@
     position: relative;
     font-size: 14px;
     font-weight: 700;
-}
-
-.pin:hover {
-    .link-btn, .select-menu-header  {
-        display: flex;
-    }
-}
-
-.pin .link-btn {
-    position: absolute;
-    bottom: 7px;
-    left: 7px;
-    background: #EFEFEF;
-    border-radius: 5px;
-    display: none;
-
-}
-.pin .link-btn span {
-    font-size: 13px;
+    cursor:auto; 
 }
 

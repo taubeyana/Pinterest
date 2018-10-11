@@ -1,5 +1,4 @@
 import React from 'react';
-// import './Form.css';
 import Button from './../button/Button'
 
 const Form = props => {

@@ -3,6 +3,9 @@
   font-weight: 700;
   margin-left: 10px; }
 
+.active-header-tab {
+  color: black; }
+
 .header-tab.link-btn {
   padding: 8px 15px;
   border-radius: 20px;

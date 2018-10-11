@@ -30,23 +30,23 @@ class Menu extends Component {
                         buttonType = { this.props.item.buttonType } 
                         handleClick = { (e) => this.toggle() }/> : null
                 }
-                {
-                    this.props.item.menuItems ?
+                {   this.props.item.menuItems ?
                         <div className = "items-outer-wrapper" style = { this.menuStyle }>
                         <div className = "items-inner-wrapper">
                     { this.props.item.menuType ?
                         <Triangle direction = { this.props.item.menuType || "up"}></Triangle> 
                         : null 
                     }
-                    { this.props.item.menuItems.map( btn => <Button 
-                                                            text = { btn.text } 
-                                                            faIcon = { btn.faIcon } 
-                                                            buttonType = { btn.buttonType } 
-                                                            className = { btn.className } 
-                                                            key = { uniqid() }
-                                                            id = { btn.id }
-                                                            handleClick = {(e) => btn.handleClick(e) } />
-                                                    )}
+                    { this.props.item.menuItems.map( 
+                        btn => <Button 
+                                text = { btn.text } 
+                                faIcon = { btn.faIcon } 
+                                buttonType = { btn.buttonType } 
+                                className = { btn.className } 
+                                key = { uniqid() }
+                                id = { btn.id }
+                                handleClick = {(e) => btn.handleClick(e) } />
+                        )}
                     { this.props.children }
                         </div>
                         </div> 

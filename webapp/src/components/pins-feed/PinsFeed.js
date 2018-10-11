@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './PinsFeed.css';
 import GridBox from './components/grid-box/GridBox';
-import {getRelevantPins} from '../../store/actions/pins.actions';
+import {getRelevantPins} from '../../store/actions/pinsActions';
 import FloatingMenu from './components/floating-menu/FloatingMenu';
 import { connect } from 'react-redux';
 import ContentWrapper from '../../common/content-wrapper/ContentWrapper'

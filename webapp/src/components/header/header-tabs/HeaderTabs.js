@@ -11,6 +11,7 @@ class HeaderTabs extends Component {
                 {
                     text: "Home",
                     className: "header-tab",
+                    activeClassName: 'active-header-tab',
                     buttonType: 'router-link',
                     to: "/"
                 },
@@ -18,12 +19,14 @@ class HeaderTabs extends Component {
                     text: "Following",
                     faIcon: "user-friends",
                     className: "header-tab",
+                    activeClassName: 'active-header-tab',
                     buttonType: 'router-link',
                     to: "/following"
                 },
                 {
                     text: "Explore",
                     className: "header-tab",
+                    activeClassName: 'active-header-tab',
                     faIcon: "compass",
                     buttonType: 'router-link',
                     to: "/explore"
@@ -32,6 +35,7 @@ class HeaderTabs extends Component {
                     text: this.props.user.name,
                     img: this.props.user.img,
                     className: "header-tab",
+                    activeClassName: 'active-header-tab',
                     buttonType: 'router-link',
                     to: this.props.user.username
                 },

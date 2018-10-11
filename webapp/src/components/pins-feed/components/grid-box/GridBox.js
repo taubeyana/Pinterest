@@ -4,7 +4,6 @@ import './GridBox.css'
 import Pin from './../pin/Pin';
 import LoadingImage from '../../../../common/loading-gif/LoadingGif';
 import uniqid from 'uniqid';
-import { connect } from 'react-redux';
 
 const masonryOptions = {
     transitionDuration: 0,
@@ -21,7 +20,6 @@ class GridBox extends Component {
                         <Pin data = { pin } key = { uniqid() }/>
                     )
                 });
-
 
         return (
             <Masonry
