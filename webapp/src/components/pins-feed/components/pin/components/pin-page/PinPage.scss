@@ -1,3 +1,37 @@
 .pin-content {
     display: flex;
+    margin: 30px auto;
+    width: fit-content;
+    .img-wrapper {
+        width: 400px;
+        background-color: black;
+        border-radius: 10px;
+        img {
+            width: 100%;
+            border-radius: inherit;
+            vertical-align: middle;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        
+    }
+    .pin-details {
+        width: 370px;
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+    }
+    .img-wrapper, .pin-details {
+        margin: 0 15px;
+    }
+    .pin-link.gray-btn {
+        border-radius: 7px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
 }
+

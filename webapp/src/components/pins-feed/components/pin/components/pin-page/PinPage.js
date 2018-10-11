@@ -1,43 +1,52 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import './PinPage.css';
 import Button from '../../../../../../common/button/Button';
 import axios from 'axios';
-import ContentWrapper from '../../../../../../common/content-wrapper/ContentWrapper'
-
-
+import ContentWrapper from '../../../../../../common/content-wrapper/ContentWrapper';
+import {shortSiteLink} from '../../../../../../services/utils'
+import LoadingImage from '../../../../../../common/loading-gif/LoadingGif';
 class PinPage extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            pin: {}
+            pin: {},
+            isLoading: true
         }
     }
     componentDidMount() {
         axios.get('/api/pins/' + this.props.match.params.id )
         .then(data => {
-            this.setState({pin: {...data.data}})
-            console.log(this.state.pin)
+            // console.log(data.data)
+            // let linkText = shortSiteLink(data.data.link)
+            // console.log(linkText)
+            // let pin = {...data.data, linkText: shortSiteLink(data.data.link) }
+            this.setState({pin: {...data.data, linkText: shortSiteLink(data.data.link)}, isLoading: false})
         })
     }
     render() {
-        console.log(this.props.match.params.id)
+        // console.log(this.props.match.params.id)
         return (
-            <ContentWrapper>
+            <Fragment>
+            { this.state.isLoading && <LoadingImage/> }
+            {<ContentWrapper>
                 <div className = 'pin-content'> 
-                    <img src = {this.state.pin.img} />
+                    <div className = "img-wrapper">
+                        <img src = {this.state.pin.img} />
+                    </div>
                     <div className = 'pin-details'>
                         <h1> { this.state.pin.title } </h1>
                         <p> { this.state.pin.body } </p>
                         <Button 
-                            text = { this.state.pin.link } 
-                            to = { this.props.match.params.id} 
-                            buttonType = "router-link" 
+                            text = { this.state.pin.linkText } 
+                            href = { this.state.pin.link } 
+                            buttonType = "link" 
                             faIcon = "external-link-alt" 
-                            className = "pin-link">
+                            className = "pin-link gray-btn">
                         </Button>
                     </div>
                 </div>
-            </ContentWrapper>
+            </ContentWrapper>}
+            </Fragment>
         )
     }
 }

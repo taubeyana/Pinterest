@@ -17,10 +17,10 @@
     object-position: 0 0;
     border-radius: inherit;
     max-height: 500px;
+    vertical-align: middle;
 }
 .pin .img-wrapper {
     background-color: black;
-    display: grid;
     position: relative;
     border-radius: inherit;
     .pin-link {
