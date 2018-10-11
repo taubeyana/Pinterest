@@ -27,7 +27,7 @@ class Pin extends Component {
         return (
             <div className = 'pin grid-item' key={ this.props.data._id } >
                 <div className = "img-wrapper">
-                    <NavLink className = 'navlink'  target="_blank" to = { '/pins/' + this.props.data._id }>
+                    <NavLink className = 'navlink' to = { '/pins/' + this.props.data._id }>
                         <img src = { this.props.data.img } alt = { this.props.data.alt } />
                     </NavLink>
                     <Button 

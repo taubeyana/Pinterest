@@ -98,7 +98,7 @@ class NewPinModal extends Component  {
                         </Input>
                     </div>
                 </div>
-                <div className = "footer-buttons">
+                <div className = "modal-footer-buttons">
                     <Button
                         buttonType = "button"
                         type = "submit"
