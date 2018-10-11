@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../button/Button';
 import './NotFoundPage.css';
 import ContentWrapper from '../content-wrapper/ContentWrapper';
-import magnifyingGlassImg from '../../img/magnifying-glass.png'
+import magnifyingGlassImg from '../../img/magnifying-glass2.png'
 const NotFoundPage = () => (
     <ContentWrapper>
         <div class="wrapper-404">

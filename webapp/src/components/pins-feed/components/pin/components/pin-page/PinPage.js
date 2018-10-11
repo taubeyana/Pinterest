@@ -5,6 +5,7 @@ import axios from 'axios';
 import ContentWrapper from '../../../../../../common/content-wrapper/ContentWrapper';
 import {shortSiteLink} from '../../../../../../services/utils'
 import LoadingImage from '../../../../../../common/loading-gif/LoadingGif';
+import FloatingMenu  from '../../../floating-menu/FloatingMenu'
 class PinPage extends Component {
     constructor(props) {
         super(props)
@@ -45,6 +46,7 @@ class PinPage extends Component {
                         </Button>
                     </div>
                 </div>
+                <FloatingMenu />
             </ContentWrapper>}
             </Fragment>
         )

@@ -30,7 +30,7 @@ class PinsFeed extends Component {
                         isLoading = { this.props.loading } 
                         data = { this.props.pins }/>
                 </div>
-                <FloatingMenu />
+                
             </ContentWrapper>
         );
     }

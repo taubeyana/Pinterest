@@ -5,6 +5,7 @@ import PinsFeed from '../components/pins-feed/PinsFeed';
 import PinPage from '../components/pins-feed/components/pin/components/pin-page/PinPage'
 import UnderConstruction from '../common/under-construction/UnderConstruction';
 import NotFoundPage from '../common/not-found-page/NotFoundPage';
+import FloatingMenu from '../components/pins-feed/components/floating-menu/FloatingMenu'
 
 const AppRouter = () => (
     <BrowserRouter> 
@@ -17,6 +18,7 @@ const AppRouter = () => (
                 <Route path = '/pins/:id' component = { PinPage }/>
                 <Route component = { NotFoundPage } />
             </Switch>
+            <FloatingMenu />
         </Fragment>
     </BrowserRouter>
 )
