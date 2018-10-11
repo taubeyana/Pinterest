@@ -1,9 +1,10 @@
 .pin-content {
     display: flex;
+    flex-wrap: wrap;
     margin: 30px auto;
     width: fit-content;
     .img-wrapper {
-        width: 400px;
+        width: 320px;
         background-color: black;
         border-radius: 10px;
         img {
@@ -17,7 +18,7 @@
         
     }
     .pin-details {
-        width: 370px;
+        width: 300px;
         h1 {
             margin: 0;
             font-size: 24px;

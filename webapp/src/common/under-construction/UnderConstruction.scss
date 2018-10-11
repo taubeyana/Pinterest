@@ -1,5 +1,6 @@
 .under-construction-content{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     margin: 30px auto;
     width: fit-content;
@@ -8,12 +9,11 @@
         img {
             width: 100%;
         }
-        
     }
     h1 {
         margin: 0;
         font-size: 40x;
-        width: 370px;   
+        width: 320px;   
     }
     
 }

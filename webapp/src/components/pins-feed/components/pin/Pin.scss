@@ -6,6 +6,9 @@
     cursor: zoom-in;
     &:hover {
         background-color: #F2F2F2;
+        .img-wrapper {
+            background-color: black;
+        }
          img {
             opacity: 0.8;
         }
@@ -20,7 +23,7 @@
     vertical-align: middle;
 }
 .pin .img-wrapper {
-    background-color: black;
+    background-color: #F2F2F2;
     position: relative;
     border-radius: inherit;
     .pin-link {
