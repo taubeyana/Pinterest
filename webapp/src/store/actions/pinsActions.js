@@ -21,10 +21,14 @@ export const pinsFetchingSuccess = (pins) => {
     }
 }
 
-export const getRelevantPins = () => {
+export const getRelevantPins = (query) => {
     return dispatch => {
-        dispatch(pinsIsLoading(true)) 
-        fetch('/api/pins')
+        dispatch(pinsIsLoading(true))
+        let url = '/api/pins';
+        if (query) {
+            url = '/api/pins/?search='+query
+        }
+        fetch(url)
             .then(res => res.json())
             .then(pins => {
                 dispatch(pinsFetchingSuccess(pins))
@@ -36,7 +40,6 @@ export const getRelevantPins = () => {
 
 export const removePin = (pinId) => {
     return {
-
         type: REMOVE_PIN,
         pinId
     }
@@ -67,11 +70,14 @@ export const removeSelectedPin = (id) => {
     }
 }
 
-export const addPin = (pinId) =>{
+export const addPin = (pin) =>{
     return {
         type : ADD_PIN,
-        pinId
+        pin
     }
+}
+export const addUploadedPin = (pin) => {
+
 }
 
 // export const removeSelectedPin = (id) => {

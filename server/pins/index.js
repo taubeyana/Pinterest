@@ -4,7 +4,15 @@ const Pin = require('./PinModel');
 
 
 router.get('/', (req,res) => {
-    Pin.find({})
+    let filter = {}
+    if (req.query.search) {
+        let regex = new RegExp(req.query.search, 'i')
+        filter.$or = [
+            { body: regex },
+            { title: regex }
+        ]
+    }
+    Pin.find(filter)
     .then(pin => res.send(pin))
     .catch(err => res.status(400).send(err.message));
 });

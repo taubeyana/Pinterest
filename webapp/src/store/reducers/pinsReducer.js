@@ -27,9 +27,7 @@ const initialState = {
 const pinsReducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_PIN: 
-            return Object.assign({},state,{
-                pins:[...state.pins,action.payload]
-            }) ;
+            return {...state, pins: [...state.pins,action.pin] }
         case PINS_IS_LOADING:
             return {...state, loading: action.status}
         case PINS_FETCHING_SUCCESS: 

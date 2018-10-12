@@ -5,7 +5,7 @@ import underConstructionImage from '../../img/under-construction1.png'
 class UnderConstruction extends Component {
     render() {
         return (
-            <ContentWrapper> 
+            <ContentWrapper className = 'flex-content-wrapper'> 
                 <div className = 'under-construction-content'> 
                     <div className = "img-wrapper">
                         <img src={underConstructionImage}></img>

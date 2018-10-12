@@ -33,6 +33,7 @@ class Button extends Component {
                          alt={ props.alt } 
                          className = "btn-img"/> 
                 }
+                
                 { props.faIcon && 
                     <FontAwesomeIcon 
                         className = { props.faIcon + "-faIcon faIcon" } 

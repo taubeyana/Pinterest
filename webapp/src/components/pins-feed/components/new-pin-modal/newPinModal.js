@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './newPinModal.css';
 import Modal from './../../../../common/modal/Modal';
 import Button from '../../../../common/button/Button';
@@ -7,7 +8,8 @@ import ImgUploadZone from '../../../../common/img-upload-zone/ImgUploadZone';
 import uploadImagesService from '../../../../services/uploadImagesService';
 import Input from '../../../../common/input/Input';
 import Axios from 'axios';
-import getUrlTitle from '../../../../services/getUrlTitle'
+import getUrlTitle from '../../../../services/getUrlTitle';
+import { addPin } from '../../../../store/actions/pinsActions';
 
 class NewPinModal extends Component  {
     constructor(props) {
@@ -61,7 +63,8 @@ class NewPinModal extends Component  {
             
         }).then(data => {
             Axios.post('/api/pins',data)
-            console.log(data)
+            .then(pin=>this.props.dispatch(addPin(pin.data)))
+            
         })
         .then( () => {
             this.props.modalClose() 
@@ -111,4 +114,4 @@ class NewPinModal extends Component  {
     }
 }
 
-export default NewPinModal;
+export default connect()(NewPinModal);

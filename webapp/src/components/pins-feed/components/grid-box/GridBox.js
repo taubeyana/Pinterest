@@ -14,7 +14,6 @@ class GridBox extends Component {
     
     render() {
         let childElements = [];
-
         childElements = this.props.data.map(pin => {
                     return (
                         <Pin data = { pin } key = { uniqid() }/>

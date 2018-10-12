@@ -4,8 +4,8 @@ import './NotFoundPage.css';
 import ContentWrapper from '../content-wrapper/ContentWrapper';
 import magnifyingGlassImg from '../../img/magnifying-glass2.png'
 const NotFoundPage = () => (
-    <ContentWrapper>
-        <div class="wrapper-404">
+    <ContentWrapper className = 'flex-content-wrapper'>
+        <div className="wrapper-404">
             <img src={ magnifyingGlassImg }/>
             <h1> 404 </h1>
             <h2> OOPS! </h2>
