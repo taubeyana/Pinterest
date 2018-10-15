@@ -16,7 +16,7 @@ class ProfilePage extends Component {
         console.log(this.props.currentUser)
     }
     componentDidMount() {
-        this.props.fetchUserFromDb('5bc4ca7d49450e2804ff8f65')
+        this.props.fetchUserFromDb('5bc502c18b4af24170a04306')
     }
     render() {
         console.log(this.props.currentUser)
@@ -42,7 +42,7 @@ class ProfilePage extends Component {
                     <Button 
                         buttonType = 'link'
                         href = 'https://www.linkedin.com/in/YanaTaube'
-                        src = 'https://pbs.twimg.com/profile_images/755315147963568128/N4uqj2Zf_400x400.jpg'
+                        src = 'https://pbs.twimg.com/profile_images/755315147963568128/N4uqj2Zf_400x400.'
                         text = 'www.linkedin.com/in/YanaTaube'
                         >
                     </Button>
