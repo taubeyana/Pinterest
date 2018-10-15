@@ -37,7 +37,7 @@ class HeaderTabs extends Component {
                     className: "header-tab",
                     activeClassName: 'active-header-tab',
                     buttonType: 'router-link',
-                    to: this.props.user.username
+                    to: '/' + this.props.user.username
                 },
             ]
         }

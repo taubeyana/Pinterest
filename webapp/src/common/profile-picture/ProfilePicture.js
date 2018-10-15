@@ -8,10 +8,10 @@ class ProfilePicture extends Component {
                 <img 
                     className = "profile-picture" 
                     src = { this.props.src } 
-                    alt = { this.props.alt }/> :
+                    alt = "profile-picture" /> :
                 <span 
                     className = "letter-image">
-                    { this.props.text.charAt(0).toUpperCase() }
+                    { this.props.firstName.charAt(0).toUpperCase() }
                 </span>
         );
     }

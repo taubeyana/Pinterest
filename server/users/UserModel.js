@@ -6,7 +6,10 @@ const UserSchema = new db.Schema({
     email: String,
     location: String,
     about: String,
-    img: String
+    img: String,
+    website: String,
+    username: String,
+    title: String
 });
 
 const User = db.model('User', UserSchema);

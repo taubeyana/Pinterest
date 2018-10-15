@@ -66,7 +66,7 @@ class Button extends Component {
                         onSubmit = { this.props.handleSubmit } 
                         onClick = { this.props.handleClick }
                         onFocus = { this.props.handleFocus } >
-                        {this.props.children}
+                        { this.props.children }
                         { this.renderInnerButton(this.props) }
                     </button>
                 );
