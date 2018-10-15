@@ -42,7 +42,7 @@ class ProfilePage extends Component {
                     <Button 
                         buttonType = 'link'
                         href = 'https://www.linkedin.com/in/YanaTaube'
-                        src = 'https://lh6.googleusercontent.com/4rp5xdKXECS-448dFfXqsUrGC_QvHokCLu2XTfkcsQFkan6tNFUOLaKx2hHHeNTuUcv16j4nBDXRChHDfiI8=w1920-h948'
+                        src = 'https://pbs.twimg.com/profile_images/755315147963568128/N4uqj2Zf_400x400.jpg'
                         text = 'www.linkedin.com/in/YanaTaube'
                         >
                     </Button>
