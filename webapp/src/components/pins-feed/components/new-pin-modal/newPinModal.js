@@ -82,23 +82,26 @@ class NewPinModal extends Component  {
                 <h1> Create Pin </h1>
                 <CloseButton handleClick = { this.props.modalClose }/>
                 <div className="modal-content-wrapper"> 
-                    <ImgUploadZone style = {this.state.dropZoneStyling} onDrop = {this.onImageDrop.bind(this)} className = "upload-zone" />
+                    <ImgUploadZone 
+                        style = {this.state.dropZoneStyling} 
+                        onDrop = {this.onImageDrop.bind(this)} 
+                        className = "upload-zone" />
                     <div className = "form-input-wrapper">
                         <span> Website </span>
-                        <Input 
-                            inputtype = 'input'
+                        <input 
+                            // type = 'input'
                             type = "url" 
                             required
                             name = "website"
                             className = "form-input" 
                             placeholder="Add the URL this Pin links to"/>
                         <span> Description </span>
-                        <Input  
+                        <textarea  
                             name = "description"
-                            inputtype = 'textarea'
+                            type = 'textarea'
                             className = "form-textarea" 
                             placeholder ="Say more About this Pin">
-                        </Input>
+                        </textarea>
                     </div>
                 </div>
                 <div className = "modal-footer-buttons">

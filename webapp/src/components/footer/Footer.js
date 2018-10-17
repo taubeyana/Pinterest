@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Footer.css';
 import Button from '../../common/button/Button';
 import uniqid from 'uniqid';
-import logoimg from '../../img/logo.png';
 
 class Footer extends Component {
     constructor(props) {
@@ -35,7 +34,7 @@ class Footer extends Component {
                     faIcon: "user",
                     className: "footer-btn",
                     buttonType: 'router-link',
-                    to: './taubeyaan'
+                    to: '/taubeyana'
                 },
             ]
         }

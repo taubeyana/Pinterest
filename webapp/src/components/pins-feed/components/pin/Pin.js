@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Pin.css';
 import OptionsMenu from './components/options-menu/OptionsMenu';
-import SelectMenu from './../../../../common/select-menu/SelectMenu'
 import Button from './../../../../common/button/Button';
 import { NavLink } from 'react-router-dom';
 import {removeSelectedPin ,removePin} from '../../../../store/actions/pinsActions'
@@ -38,7 +37,6 @@ class Pin extends Component {
                         className = "pin-link">
                     </Button>
                 </div>
-                    {/*<SelectMenu />*/}
                 <div className = "options-wrapper">
                     <span>{ this.truncateString(this.props.data.title) }</span>
                     <OptionsMenu handleClick = { this.handleClick.bind(this) }/>
@@ -51,4 +49,4 @@ const mapDispatchToProps = (dispatch) => {
     return {removeSelectedPin: (id) => dispatch(removeSelectedPin(id)),
     removePin: (id) => dispatch(removePin(id))}
 }
-export default connect(null, mapDispatchToProps )(Pin);
+export default connect(null, mapDispatchToProps)(Pin);

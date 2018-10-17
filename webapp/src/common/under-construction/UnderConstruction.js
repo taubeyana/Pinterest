@@ -8,7 +8,7 @@ class UnderConstruction extends Component {
             <ContentWrapper className = 'flex-content-wrapper'> 
                 <div className = 'under-construction-content'> 
                     <div className = "img-wrapper">
-                        <img src={underConstructionImage}></img>
+                        <img src = { underConstructionImage } alt="" />
                     </div>
                     <h1> This page is still under construction </h1>
                 </div>

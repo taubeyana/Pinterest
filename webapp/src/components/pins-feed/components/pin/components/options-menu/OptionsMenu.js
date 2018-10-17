@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import {ReactDOM, findDOMNode } from 'react-dom'
 import './OptionsMenu.css';
 import Menu from './../../../../../../common/menu/Menu';
-import SendButton from './../../../../../../common/send-button/SendButton';
-import ReportButton from './../../../../../../common/report-button/ReportButton';
 import uniqid from 'uniqid';
 
 class OptionsMenu extends Component {
@@ -42,6 +39,3 @@ class OptionsMenu extends Component {
 }
 
 export default OptionsMenu;
-
-// <SendButton/>
-// <ReportButton/>

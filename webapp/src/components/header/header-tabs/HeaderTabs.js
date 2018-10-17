@@ -31,26 +31,28 @@ class HeaderTabs extends Component {
                     buttonType: 'router-link',
                     to: "/explore"
                 },
-                {
-                    text: this.props.user.name,
-                    img: this.props.user.img,
-                    className: "header-tab",
-                    activeClassName: 'active-header-tab',
-                    buttonType: 'router-link',
-                    to: '/' + this.props.user.username
-                },
+                
             ]
         }
     }
     render() {
+        const user =  {
+            text: this.props.user.firstName,
+            img: this.props.user.img,
+            className: "header-tab",
+            activeClassName: 'active-header-tab',
+            buttonType: 'router-link',
+            to: '/' + this.props.user.username
+        }
         return (
             <div className = "header-tabs">
                 {
                     this.state.tabsData.map(item => <Button { ...item } key={ uniqid() }/>)
-                }  
+                }
+                <Button { ...user } />
             </div>
             
         );
     }
 }  
-export default HeaderTabs;
+export default HeaderTabs
