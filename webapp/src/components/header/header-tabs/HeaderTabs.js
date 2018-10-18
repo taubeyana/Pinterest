@@ -13,25 +13,17 @@ class HeaderTabs extends Component {
                     className: "header-tab",
                     activeClassName: 'active-header-tab',
                     buttonType: 'router-link',
-                    to: "/"
+                    to: "/",
+                    exact: true
                 },
                 {
+                    to: "/following",
                     text: "Following",
                     faIcon: "user-friends",
                     className: "header-tab",
                     activeClassName: 'active-header-tab',
                     buttonType: 'router-link',
-                    to: "/following"
                 },
-                {
-                    text: "Explore",
-                    className: "header-tab",
-                    activeClassName: 'active-header-tab',
-                    faIcon: "compass",
-                    buttonType: 'router-link',
-                    to: "/explore"
-                },
-                
             ]
         }
     }

@@ -12,8 +12,10 @@ export const getUserById = (user) => {
 export const fetchUserFromDb = (id) => {
     return dispatch => {
         Axios.get('/api/users/' + id)
-        .then(data => dispatch(getUserById(data.data)))
+        .then(data => data.data)
+        .then(user => dispatch(getUserById(user) ))
         .catch(err => console.log(err.message))
     }
     
 }
+// dispatch(getUserById(data.data)))

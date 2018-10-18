@@ -39,4 +39,4 @@
             currentUser: state.usersReducer.currentUser
         }
     }
-    export default withRouter(connect(mapStateToProps)(ProfilePage));
+    export default connect(mapStateToProps)(ProfilePage);

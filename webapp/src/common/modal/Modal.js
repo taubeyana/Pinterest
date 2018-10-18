@@ -6,7 +6,7 @@ const Modal = props => {
     return (
        props.modalOpen ? 
         (<Fragment>
-            <Backdrop modalClose = { props.modalClose } ></Backdrop>
+            <Backdrop close = { props.modalClose } ></Backdrop>
             <div className = {props.className + " modal"}> 
                 {props.children}
             </div>

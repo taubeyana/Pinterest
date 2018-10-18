@@ -3,22 +3,19 @@ import Button from './../button/Button';
 import Triangle from './../triangle/Triangle';
 import './Menu.css';
 import uniqid from 'uniqid';
+import onClickOutside from "react-onclickoutside";
 
 class Menu extends Component {
     constructor(props) {
         super(props)
-        this.state = { isDisplayed: true }
-        this.menuStyle = { visibility: "hidden" }
+        this.state = { isDisplayed: false }
         this.toggle = this.toggle.bind(this)
     }
-    toggle(e) {
+    toggle() {
         this.setState({ isDisplayed: !this.state.isDisplayed })
-        if  (this.state.isDisplayed === true) {
-            this.menuStyle = { visibility: "visible" }
-        }
-        else {
-            this.menuStyle = { visibility: "hidden" }
-        }
+    }
+    handleClickOutside = () => {
+        this.setState({ isDisplayed: false })
     }
     render() {
         return (
@@ -30,8 +27,8 @@ class Menu extends Component {
                         buttonType = { this.props.item.buttonType } 
                         handleClick = { (e) => this.toggle() }/> : null
                 }
-                {   this.props.item.menuItems ?
-                        <div className = "items-outer-wrapper" style = { this.menuStyle }>
+                {   this.props.item.menuItems &&  this.state.isDisplayed ==true ?
+                        <div className = "items-outer-wrapper" >
                         <div className = "items-inner-wrapper">
                     { this.props.item.menuType ?
                         <Triangle direction = { this.props.item.menuType || "up"}></Triangle> 
@@ -45,7 +42,7 @@ class Menu extends Component {
                                 className = { btn.className } 
                                 key = { uniqid() }
                                 id = { btn.id }
-                                handleClick = {(e) => btn.handleClick(e) } />
+                                handleClick = {() => btn.handleClick() } />
                         )}
                     { this.props.children }
                         </div>
@@ -56,4 +53,4 @@ class Menu extends Component {
         );
     }
 }
-export default Menu;
+export default onClickOutside(Menu);

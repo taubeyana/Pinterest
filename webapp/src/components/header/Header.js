@@ -19,7 +19,8 @@ class Header extends Component {
                     className = "logo" 
                     img = { logoimg } 
                     alt = "logoimg"
-                    to = '/' />
+                    to = '/'
+                    exact = {true} />
                 <Search/>
                 <HeaderTabs user = { this.props.currentUser }/>
                 <HeaderMenus/>

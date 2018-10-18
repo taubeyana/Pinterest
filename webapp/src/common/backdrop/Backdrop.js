@@ -3,9 +3,8 @@ import './Backdrop.css';
 
 const Backdrop = (props) => {
     return (
-        <div 
-            className = 'backdrop'
-            onClick = { (e) => props.modalClose(e) }>
+        <div className = { props.className ? props.className + ' backdrop' : 'backdrop' }
+            onClick = { (e) => props.close(e) }>
         </div>)
 }
 
