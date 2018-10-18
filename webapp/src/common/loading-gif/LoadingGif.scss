@@ -1,3 +1,8 @@
 .loading-gif {
     width: 50px;
+    margin: auto;
+    position: fixed !important;
+    left: 50% !important;
+    top: 130px;
+    transform: translateX(-50%)
 }

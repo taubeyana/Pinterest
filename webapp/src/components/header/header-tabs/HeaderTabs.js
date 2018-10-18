@@ -14,7 +14,8 @@ class HeaderTabs extends Component {
                     activeClassName: 'active-header-tab',
                     buttonType: 'router-link',
                     to: "/",
-                    exact: true
+                    exact: true,
+                    handleClick: this.props.handleClickOnHome
                 },
                 {
                     to: "/following",
@@ -43,7 +44,6 @@ class HeaderTabs extends Component {
                 }
                 <Button { ...user } />
             </div>
-            
         );
     }
 }  

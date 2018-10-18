@@ -28,7 +28,6 @@ class GridBox extends Component {
                 updateOnEachImageLoad = { false } // default false and works only if disableImagesLoaded is false
                 options = { masonryOptions }
             >
-                { this.props.isLoading && <LoadingImage/> }
                 { childElements }
             </Masonry>
         );

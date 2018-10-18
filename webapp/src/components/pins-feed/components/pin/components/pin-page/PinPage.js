@@ -25,7 +25,6 @@ class PinPage extends Component {
         })
     }
     render() {
-        console.log(this.state.pin)
         return (
             <Fragment>
             { this.state.isLoading && <LoadingImage/> }
