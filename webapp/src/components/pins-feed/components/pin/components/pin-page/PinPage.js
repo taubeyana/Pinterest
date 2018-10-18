@@ -28,7 +28,7 @@ class PinPage extends Component {
         return (
             <Fragment>
             { this.state.isLoading && <LoadingImage/> }
-            {<ContentWrapper>
+            {<ContentWrapper className = "pin-page-wrapper">
                 <div className = 'pin-content'> 
                     <div className = "img-wrapper">
                         <img src = {this.state.pin.img} alt="" />
@@ -45,6 +45,13 @@ class PinPage extends Component {
                         </Button>
                     </div>
                 </div>
+                <Button 
+                    to = '/'
+                    text = "Home"
+                    buttonType = "router-link" 
+                    faIcon = "angle-left" 
+                    className = "home-btn">
+                </Button>
                 <FloatingMenu />
             </ContentWrapper>}
             </Fragment>

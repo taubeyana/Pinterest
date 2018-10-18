@@ -35,3 +35,8 @@
 
 .red-btn:hover {
   background: #AD081B; }
+
+.btn-text {
+  padding: 15px;
+  color: lightgray;
+  cursor: not-allowed; }
