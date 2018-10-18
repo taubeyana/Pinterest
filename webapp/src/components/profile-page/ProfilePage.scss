@@ -4,6 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    .profile-picture {
+        height: 180px;
+        width: 180px;
+        border: 6px solid white;
+        position: relative;
+        left: 40px;
+    }
     .images-background {
         height: 30vh;
         width: 100%;
@@ -14,52 +21,25 @@
         img {
             border: 5px solid white;
         }
+        
     }
     .profile-page {
         position: relative;
         width: 50%;
         display: flex;
         flex-direction: column;
-        .user-basic-info {
-            display: flex;
-            position: absolute;
-            top: -60px;
-        }
-        .profile-picture {
-            height: 180px;
-            width: 180px;
-            border: 6px solid white;
-        }
-        .user-name-and-desription {
-            position: relative;
-            top: 60px;
-            text-align: center;
-            h1 {
-                margin: 10px 5px 5px 10px;
-                font-size: 50px
-            }
-        }
-
-        .about-user {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: start;
-            position: relative;
-            top: 154px;
-            left: -42px;
-            justify-content: space-between;
-            p {
-                width: 50%
-            }
-        }
-        
+        position: absolute;
+        top: 200px;
+    }
+    h1 {
+        margin: 10px 5px 5px 10px;
+        font-size: 50px
+    }
+    .about-user {
+        color: lighten(#000000,30%)
+    }
+    p {
+        font-style: italic;
+        font-size: 20px
     }
 }
-
-// .user-basic-info {
-//     display: flex;
-//     flex-direction: column;
-//     position: relative;
-//     top: -60px;
-//     align-items: center;
-// }

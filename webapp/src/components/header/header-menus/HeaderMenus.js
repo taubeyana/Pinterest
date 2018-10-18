@@ -13,7 +13,9 @@ class HeaderMenus extends Component {
                     menuIcon: "comment",
                     buttonType: 'button',
                     isDisplayed: true,
-                    menuItems: null,
+                    menuItems: [{
+                        text:  'Menu is not available'
+                    }],
                     menuType: null
                 },
                 {
@@ -21,8 +23,10 @@ class HeaderMenus extends Component {
                     isDisplayed: true,
                     menuIcon: "bell",
                     buttonType: 'button',
-                    menuItems: null,
-                    menuType: null
+                    menuItems: [{
+                        text:  'Menu is not available'
+                    }],
+                    menuType: 'up'
                 },
                 {
                     name: "settings",

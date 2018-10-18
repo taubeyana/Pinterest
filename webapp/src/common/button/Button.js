@@ -77,10 +77,11 @@ class Button extends Component {
                             activeClassName = { this.props.activeClassName }
                             className = { "link-btn " + this.props.className }>
                             { this.renderInnerButton(this.props) }
+                            
                         </NavLink> 
                     );
                 default:
-                    return null;
+                        return this.props.text ? <span className = "btn-text"> { this.props.text } </span> : null
         }
     }
 }

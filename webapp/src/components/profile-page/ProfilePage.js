@@ -12,14 +12,10 @@
                 <ContentWrapper className = 'profile-page-wrapper'>
                     <div className = "images-background"></div>
                     <div className = 'profile-page'>
-                        <div className = 'user-basic-info'>
-                            <ProfilePicture  firstName = { this.props.currentUser.firstName } src = { this.props.currentUser.img }/>
-                            <div className = 'user-name-and-desription'> 
-                                <h1> { this.props.currentUser.firstName + ' ' + this.props.currentUser.lastName } </h1>
-                                <span> { this.props.currentUser.title } </span>
-                            </div>
-                        </div>
+                        <ProfilePicture className = "profile-picture" firstName = { this.props.currentUser.firstName } src = { this.props.currentUser.img }/>
                         <div className = 'about-user'>
+                            <h1> { this.props.currentUser.firstName + ' ' + this.props.currentUser.lastName } </h1>
+                            <p> {this.props.currentUser.about} </p>
                             <Button 
                                 buttonType = 'link'
                                 href = { this.props.currentUser.website }
@@ -27,7 +23,6 @@
                                 text = 'www.linkedin.com/in/YanaTaube'
                                 >
                             </Button>
-                            <p> {this.props.currentUser.about} </p>
                         </div>
                     </div>
                 </ContentWrapper>
