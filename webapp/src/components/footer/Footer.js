@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Footer.css';
 import Button from '../../common/button/Button';
 import uniqid from 'uniqid';
+import { connect } from 'react-redux';
+import { fetchUserFromDb } from '../../store/actions/usersActions'
 
 class Footer extends Component {
     constructor(props) {
@@ -34,10 +36,13 @@ class Footer extends Component {
                     faIcon: "user",
                     className: "footer-btn",
                     buttonType: 'router-link',
-                    to: '/taubeyana'
+                    to: '/' + this.props.currentUser.username
                 },
             ]
         }
+    }
+    componentDidMount() {
+        this.props.fetchUserFromDb('5bc502c18b4af24170a04306')
     }
     render() {
         return (
@@ -50,4 +55,14 @@ class Footer extends Component {
         );
     }
 }  
-export default Footer;
+const mapStateToProps = state => {
+    return {
+        currentUser: state.usersReducer.currentUser
+    }
+}
+const mapDispatchToProps = dispatch => {
+    return {
+        fetchUserFromDb: (id) => dispatch(fetchUserFromDb(id)),
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Footer);
