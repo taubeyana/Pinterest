@@ -30,7 +30,7 @@ class Footer extends Component {
                     to: "/notifications"
                 },
                 {
-                    text: "Saved",
+                    text: "Profile",
                     faIcon: "user",
                     className: "footer-btn",
                     buttonType: 'router-link',

@@ -35,14 +35,16 @@ class HeaderMenus extends Component {
                     menuItems: [
                         {
                             text: 'Settings',
-                            buttonType: 'button',
+                            buttonType: 'router-link',
+                            to: '/settings',
                             faIcon: null,
                             className: 'settings-btn',
                             handleClick: this.handleClick
                         },
                         {
                             text: 'Logout',
-                            buttonType: 'button',
+                            buttonType: 'router-link',
+                            to: '/login',
                             faIcon: null,
                             className: 'logout-btn',
                             handleClick: this.handleClick

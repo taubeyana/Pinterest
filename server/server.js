@@ -17,5 +17,4 @@ app.listen(process.env.PORT || 9090,(error)=>{
     if(error)console.log(error.message);
     console.log('Listening...')
 });
-// app.listen(9090)
 

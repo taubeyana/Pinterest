@@ -42,6 +42,7 @@ class Menu extends Component {
                                 className = { btn.className } 
                                 key = { uniqid() }
                                 id = { btn.id }
+                                to = { btn.to }
                                 handleClick = {() => btn.handleClick() } />
                         )}
                     { this.props.children }
