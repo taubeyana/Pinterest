@@ -1,9 +1,7 @@
 .pin-page-wrapper {
     background-color: #EEEEEE;
-    height: 100vh;
     width: 100%;
     top: 0;
-    position: fixed;
     z-index: 500;
     .home-btn {
         position: absolute;
@@ -23,7 +21,7 @@
 .pin-content {
     display: flex;
     flex-wrap: wrap;
-    margin: 30px auto;
+    margin: 80px auto;
     width: fit-content;
     border: 1px lightgray solid;
     padding: 30px;
@@ -31,7 +29,8 @@
     background-color: white;
     .img-wrapper {
         width: 320px;
-        background-color: black;
+        display: flex;
+        // background-color: black;
         border-radius: 10px;
         img {
             width: 100%;
@@ -40,6 +39,9 @@
             &:hover {
                 opacity: 0.8;
             }
+        }
+        &:hover {
+            background-color: black;
         }
         
     }
@@ -51,7 +53,7 @@
         }
     }
     .img-wrapper, .pin-details {
-        margin: 0 15px;
+        margin: 5px 15px;
     }
     .pin-link.gray-btn {
         border-radius: 7px;

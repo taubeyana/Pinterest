@@ -4,12 +4,14 @@ import {
     PINS_IS_LOADING,
     REMOVE_PIN,
     PINS_FETCHING_ERROR,
+    UPLOAD_IN_PROGRESS
 
 } from '../actions/pinsActions'
 
 const initialState = {
     loading: true,
     pins: [],
+    isUploading: false
 }
 
 const pinsReducer = (state = initialState, action) => {
@@ -25,6 +27,8 @@ const pinsReducer = (state = initialState, action) => {
             return {...state, pins: pins.filter(pin => pin._id !== action.pinId)}
         case PINS_FETCHING_ERROR: 
             return {...state, totalPins: action.error}
+        case UPLOAD_IN_PROGRESS:
+            return { ...state, isUploading: action.status}
         default:
             return state
     }

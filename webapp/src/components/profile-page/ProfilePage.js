@@ -31,7 +31,8 @@
     }
     const mapStateToProps = (state) => {
         return {
-            currentUser: state.usersReducer.currentUser
+            currentUser: state.usersReducer.currentUser,
+            pins: state.pinsReducer.pins
         }
     }
     export default connect(mapStateToProps)(ProfilePage);

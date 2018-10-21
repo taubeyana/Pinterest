@@ -6,6 +6,7 @@ export const REMOVE_PIN = 'REMOVE_PIN';
 export const REMOVE_PIN_SUCCES = 'REMOVE_PIN_SUCCES';
 export const REMOVE_PIN_ERROR = 'REMOVE_PIN_ERROR';
 export const RESET_PINS = 'SEARCH_PIN';
+export const UPLOAD_IN_PROGRESS = 'UPLOAD_IN_PROGRESS'
 
 
 
@@ -79,6 +80,15 @@ export const removeSelectedPin = (id) => {
     }
 }
 
+export const uploadInProgress = (status) => {
+    return {
+        type: UPLOAD_IN_PROGRESS,
+        status
+    }
+}
+
+
+
 export const addPin = (pin) =>{
     return {
         type : ADD_PIN,
@@ -88,4 +98,3 @@ export const addPin = (pin) =>{
 export const addUploadedPin = (pin) => {
 
 }
-

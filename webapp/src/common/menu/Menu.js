@@ -27,7 +27,7 @@ class Menu extends Component {
                         buttonType = { this.props.item.buttonType } 
                         handleClick = { (e) => this.toggle() }/> : null
                 }
-                {   this.props.item.menuItems &&  this.state.isDisplayed ==true ?
+                {   this.props.item.menuItems &&  this.state.isDisplayed === true ?
                         <div className = "items-outer-wrapper" >
                         <div className = "items-inner-wrapper">
                     { this.props.item.menuType ?

@@ -5,7 +5,7 @@ import configureStore from './store/configureStore'
 import { Provider } from 'react-redux';
 import AppRouter from './router/AppRouter';
 
-const store = configureStore();
+export const store = configureStore();
 
 class App extends Component {
   render() {

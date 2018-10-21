@@ -3,7 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+.loading-gif {
+    position: absolute;
+}
+
 .dz-content {
     display: flex;
     flex-direction: column;
