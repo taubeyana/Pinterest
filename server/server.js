@@ -15,6 +15,6 @@ app.use(express.static(buildFolder))
 
 app.listen(process.env.PORT || 9090,(error)=>{
     if(error)console.log(error.message);
-    console.log('Listening...')
+    console.log('Listening..')
 });
 

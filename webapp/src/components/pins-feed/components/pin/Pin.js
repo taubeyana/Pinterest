@@ -4,12 +4,11 @@ import './Pin.css';
 import OptionsMenu from './components/options-menu/OptionsMenu';
 import Button from './../../../../common/button/Button';
 import { NavLink } from 'react-router-dom';
-import {removeSelectedPin ,removePin} from '../../../../store/actions/pinsActions'
+import { removeSelectedPin, removePin } from '../../../../store/actions/pinsActions'
 
 class Pin extends Component {
     constructor(props) {
         super(props)
-        this.ref = this.props.data._id
         this.state = {...this.props.data}
     }
     shortSiteLink(link) {
@@ -20,7 +19,7 @@ class Pin extends Component {
         return  str.length > 50 ? str.slice(0, 50) + '...' : str;
     }
     handleClick(e) {
-        this.props.removeSelectedPin(this.ref)
+        this.props.removeSelectedPin(this.props.data._id)
     }
     render() {
         return (

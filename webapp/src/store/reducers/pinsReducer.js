@@ -11,7 +11,8 @@ import {
 const initialState = {
     loading: true,
     pins: [],
-    isUploading: false
+    isUploading: false,
+    pinsNotFound: false
 }
 
 const pinsReducer = (state = initialState, action) => {
@@ -26,7 +27,7 @@ const pinsReducer = (state = initialState, action) => {
             let pins = [...state.pins]
             return {...state, pins: pins.filter(pin => pin._id !== action.pinId)}
         case PINS_FETCHING_ERROR: 
-            return {...state, totalPins: action.error}
+            return {...state, pinsNotFound: action.error}
         case UPLOAD_IN_PROGRESS:
             return { ...state, isUploading: action.status}
         default:

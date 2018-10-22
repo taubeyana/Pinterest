@@ -32,6 +32,7 @@ export const pinsFetchingError = (error) => {
 export const getRelevantPins = (query) => {
     return (dispatch, getState) => {
         dispatch(pinsIsLoading(true))
+        dispatch(pinsFetchingError(false))
         let url;
         if (query) {
             url = '/api/pins/?search='+ query
@@ -42,8 +43,14 @@ export const getRelevantPins = (query) => {
         fetch(url)
             .then(res => res.json())
             .then(pins => {
-                dispatch(pinsFetchingSuccess(pins))
-                dispatch(pinsIsLoading(false))
+                if (pins.length === 0 && query !== "") {
+                    dispatch(pinsFetchingError(true))
+                } 
+
+                    dispatch(pinsFetchingSuccess(pins))
+                    dispatch(pinsIsLoading(false))
+                    
+                
             })
             .catch(e => console.log(e))
     }

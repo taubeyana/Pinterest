@@ -5,6 +5,7 @@ import { getRelevantPins } from '../../store/actions/pinsActions';
 import qs from 'query-string'
 import { connect } from 'react-redux';
 import LoadingImage from '../../common/loading-gif/LoadingGif';
+import NotFoundPage from '../../common/not-found-page/NotFoundPage';
 
 
 import ContentWrapper from '../../common/content-wrapper/ContentWrapper'
@@ -35,6 +36,7 @@ class PinsFeed extends Component {
                         isLoading = { this.props.loading } 
                         data = { this.props.pins }/>
                 </div>
+                { this.props.pinsNotFound === true && <NotFoundPage search/>}
             </ContentWrapper>
         );
     }
@@ -43,7 +45,8 @@ class PinsFeed extends Component {
 const mapStateToProps = state => {
     return {
         pins: state.pinsReducer.pins,
-        loading: state.pinsReducer.loading
+        loading: state.pinsReducer.loading,
+        pinsNotFound: state.pinsReducer.pinsNotFound
     }
 }
 const mapDispatchToProps = dispatch => {
