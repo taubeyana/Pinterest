@@ -34,14 +34,14 @@ DB properties:
 * Collections: pins, users
 * Pin schema example: 
 
-{
-    "_id" : ObjectId("5b7e4a3aaf96de46e85867d3"),
-    "title" : "7 Free JavaScript E-Books and Tutorials",
-    "body" : "JavaScript has never been hotter, thanks to projects like Node.js, JQuery and PhoneGap.",
-    "img" : "https://i.pinimg.com/564x/47/2e/93/472e93e0a83b58aa3b7fabbce198de50.jpg",
-    "link" : "https://readwrite.com/2010/12/04/6-free-javascript-e-books",
-    "category" : "Tech",
-    "__v" : 0
+{<br>
+    "_id" : ObjectId("5b7e4a3aaf96de46e85867d3"),<br>
+    "title" : "7 Free JavaScript E-Books and Tutorials",<br>
+    "body" : "JavaScript has never been hotter, thanks to projects like Node.js, JQuery and PhoneGap.",<br>
+    "img" : "https://i.pinimg.com/564x/47/2e/93/472e93e0a83b58aa3b7fabbce198de50.jpg",<br>
+    "link" : "https://readwrite.com/2010/12/04/6-free-javascript-e-books",<br>
+    "category" : "Tech",<br>
+    "__v" : 0<br>
 }
 
 ### Installing
