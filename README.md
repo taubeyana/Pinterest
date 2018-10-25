@@ -1,6 +1,6 @@
 # Pinterest – Clone
 
-Netcraft academy FED course final project.
+Netcraft academy FED course final project.<br>
 All the elements are active, you can search, add and remove pins. 
 
 ## Live Demo
