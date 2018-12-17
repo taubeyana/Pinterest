@@ -3,7 +3,8 @@ import './Footer.css';
 import Button from '../../common/button/Button';
 import uniqid from 'uniqid';
 import { connect } from 'react-redux';
-import { fetchUserFromDb } from '../../store/actions/usersActions'
+import { fetchUserFromDb } from '../../store/actions/usersActions';
+import homeIcon from'../../img/home.png';
 
 class Footer extends Component {
     constructor(props) {
@@ -13,7 +14,7 @@ class Footer extends Component {
                 {
                     text: "Home",
                     className: "footer-btn",
-                    img: 'https://goo.gl/M1iGNy',
+                    img: homeIcon,
                     buttonType: 'router-link',
                     to: "/"
                 },
