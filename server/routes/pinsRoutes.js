@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Pin = require('./PinModel');
-
+const Pin = require('../db/PinModel');
 
 router.get('/', (req,res) => {
     let filter = {}

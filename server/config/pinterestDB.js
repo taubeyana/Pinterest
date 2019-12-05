@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const pinterestDB = process.env.MONGODB_URI || 'mongodb://localhost:27017/pinterest';
+const keys = require('../config/keys')
+const pinterestDB = process.env.MONGODB_URI || keys.mongoURI;
 
 mongoose.connect(pinterestDB)
 .then(console.log('Connected to pinterestDB'))

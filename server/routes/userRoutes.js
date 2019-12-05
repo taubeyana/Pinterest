@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const User = require('./UserModel');
+const User = require('../db/UserModel');
 
 router.get('/', (req,res) => {
     User.find({}).then(user => res.send(user));

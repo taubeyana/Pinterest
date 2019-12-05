@@ -1,4 +1,4 @@
-const db = require('../pinterestDB');
+const db = require('../config/pinterestDB');
 
 const PinSchema = db.Schema({
     title: String,
